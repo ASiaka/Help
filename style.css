@@ -56,10 +56,10 @@ border-radius: 3px;
 border: #2E324470 1px solid;
 }
 
-.main_paragraph {
+.main_word_style {
   width: 350px;
   padding: 15px;
-  margin: 25px;
+  margin: 25px auto;
   border-radius: 5px;
   color: #EFF3F5;
   background-color: #2E3244;
@@ -67,12 +67,40 @@ border: #2E324470 1px solid;
   box-sizing: border-box;
 }
 
-.bravo {
-  padding: 10px;
+.main_validation {
+  width: 100px;
+  height: 35px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gainsboro;
+  background-color: #EFF3F5;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: gainsboro 1px solid;
+  position: fixed;
+  top: calc(200px + 15vh);
+}
+
+.main_success {
+  width: 20px;
+  padding: 5px;
   border-radius: 5px;
   text-align: center;
+}
+.success {
   background-color: green;
-  color: white;
+}
+
+.main_failed {
+  width: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.failed {
+  background-color: red;
 }
 
 .main_button {
@@ -85,6 +113,23 @@ border: #2E324470 1px solid;
   position: fixed;
   bottom: 10vh;
   box-sizing: border-box;
+}
+
+@media (max-width: 450px) {
+  .main_word_style {
+    width: 250px;
+  }
+  .main_button {
+    width: 150px;
+  }
+}
+@media (max-width: 350px) {
+  .main_word_style {
+    width: 200px;
+  }
+  .main_button {
+    width: 100px;
+  }
 }
 
 /*FOOTER*/

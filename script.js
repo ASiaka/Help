@@ -1,13 +1,18 @@
 console.log("Help");
 
+const response = document.querySelector(".main_form #response");
+const word = document.querySelector(".main_word");
+const validation = document.querySelector(".main_validation");
+const success = document.querySelector(".main_success");
+const failed = document.querySelector(".main_failed");
+const button = document.querySelector(".main_button");
+
 let App = {
   init: function() {
-    console.log(vocabulary, App.wordsTable());
+    console.log(vocabulary);
 
-    const button = document.querySelector(".main_button");
     button.addEventListener('click', App.handlePlayWords);
-    let input = document.querySelector(".main_form #response");
-    input.addEventListener('input', App.handleValidation);
+    response.addEventListener('input', App.handleValidation);
   },
 
   fr: function () {
@@ -19,7 +24,7 @@ let App = {
     const en = vocabulary.map(i => i.en.toLowerCase());
     return en  },
 
-  wordsTable: function () {
+  wordsArray: function () {
     const newArray = [];
     App.fr().map((i) => newArray.push(i));
     App.en().map((i) => newArray.push(i));
@@ -27,24 +32,38 @@ let App = {
   },
 
   handlePlayWords: function () {
-    let word = Math.round(Math.random() * App.wordsTable().length);
-    let paragraph = document.querySelector(".word_paragraph");
-    paragraph.classList.add("main_paragraph")
-    paragraph.textContent = App.wordsTable()[word];
-    document.querySelector(".main_form #response").value = "";
-    document.querySelector(".main_form #response").focus();
+    let wordIndex = Math.round(Math.random() * App.wordsArray().length);
+    word.classList.add("main_word_style");
+    word.textContent = App.wordsArray()[wordIndex];
+    response.value = "";
+    response.focus();
   },
 
   handleValidation: function() {
-    let inputValue = document.querySelector(".main_form #response").value.toLowerCase();
-    const word = document.querySelector(".main_paragraph");
-    const validation = document.querySelector(".validation_paragraph");
-    if (inputValue === word.textContent) {
-      console.log("Bravo");
-      validation.textContent = "Bravo";
-      validation.classList.add("bravo");
+    const wordFilter = vocabulary.filter(i => {
+      if (response.value.toLowerCase() === word.textContent.toLowerCase() || response.value.toLowerCase() === word.textContent.toLowerCase()) {
+        return i.fr.toLowerCase() === word.textContent.toLowerCase() || i.en.toLowerCase() === word.textContent.toLowerCase()
+      }
+    });
+    const goodAnswer = wordFilter.find(i => {
+      if (response.value.toLowerCase() === i.fr.toLowerCase()) {
+        console.log(i.en);
+        return i.en
+      }
+      if (response.value.toLowerCase() === i.en.toLowerCase()) {
+        console.log(i.fr);
+        return i.fr
+      }
+    })
+
+    console.log(wordFilter, goodAnswer);
+    if (response.value === word.textContent) {
+      success.classList.add("success");
+      failed.classList.remove("failed");
+    } else {
+      success.classList.remove("success");
+      failed.classList.add("failed");
     }
-    console.log(inputValue);
   }
 
 }
