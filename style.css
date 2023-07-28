@@ -80,7 +80,7 @@ border: #2E324470 1px solid;
   border-radius: 5px;
   border: gainsboro 1px solid;
   position: fixed;
-  top: calc(200px + 15vh);
+  top: calc(250px + 15vh);
 }
 
 .main_success {

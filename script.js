@@ -2,6 +2,7 @@ console.log("Help");
 
 const response = document.querySelector(".main_form #response");
 const word = document.querySelector(".main_word");
+const goodAnswer = document.querySelector(".main_response");
 const validation = document.querySelector(".main_validation");
 const success = document.querySelector(".main_success");
 const failed = document.querySelector(".main_failed");
@@ -40,30 +41,41 @@ let App = {
   },
 
   handleValidation: function() {
-    const wordFilter = vocabulary.filter(i => {
-      if (response.value.toLowerCase() === word.textContent.toLowerCase() || response.value.toLowerCase() === word.textContent.toLowerCase()) {
-        return i.fr.toLowerCase() === word.textContent.toLowerCase() || i.en.toLowerCase() === word.textContent.toLowerCase()
-      }
+    const wordFind = vocabulary.find(i => {
+      return (i.fr.toLowerCase() === word.textContent.toLowerCase() ||
+              i.en.toLowerCase() === word.textContent.toLowerCase())
     });
-    const goodAnswer = wordFilter.find(i => {
-      if (response.value.toLowerCase() === i.fr.toLowerCase()) {
-        console.log(i.en);
-        return i.en
-      }
-      if (response.value.toLowerCase() === i.en.toLowerCase()) {
-        console.log(i.fr);
-        return i.fr
-      }
-    })
 
-    console.log(wordFilter, goodAnswer);
-    if (response.value === word.textContent) {
+    if (word.textContent.toLowerCase() === wordFind.en.toLowerCase() && response.value.toLowerCase() === wordFind.fr.toLowerCase()) {
       success.classList.add("success");
       failed.classList.remove("failed");
-    } else {
-      success.classList.remove("success");
-      failed.classList.add("failed");
-    }
+
+      goodAnswer.textContent = wordFind.fr;
+      response.value = "";
+
+      setTimeout(() => {
+        App.handlePlayWords();
+        success.classList.remove("success");
+        goodAnswer.textContent = "";
+      }, 1500);
+
+    } else if (word.textContent.toLowerCase() === wordFind.fr.toLowerCase() && response.value.toLowerCase() === wordFind.en.toLowerCase()) {
+        success.classList.add("success");
+        failed.classList.remove("failed");
+
+        goodAnswer.textContent = wordFind.en;
+        response.value = "";
+
+        setTimeout(() => {
+          App.handlePlayWords();
+          success.classList.remove("success");
+          goodAnswer.textContent = "";
+        }, 1500);
+
+      } else {
+          success.classList.remove("success");
+          failed.classList.add("failed");
+        }
   }
 
 }
