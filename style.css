@@ -79,7 +79,7 @@ border: #2E324470 1px solid;
   box-sizing: border-box;
   border-radius: 5px;
   border: gainsboro 1px solid;
-  position: fixed;
+  position: absolute;
   top: calc(250px + 15vh);
 }
 
@@ -110,7 +110,7 @@ border: #2E324470 1px solid;
   color: #EFF3F5;
   background-color: #2E3244;
   font-family: 'Pacifico', cursive;
-  position: fixed;
+  position: absolute;
   bottom: 10vh;
   box-sizing: border-box;
 }
