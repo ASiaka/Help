@@ -31,7 +31,7 @@ body {
 /*MAIN*/
 
 .main_content {
-  /* height: 78vh; */
+  height: 78vh;
   padding-top: 15vh;
   display: flex;
   flex-direction: column;
@@ -111,8 +111,8 @@ border: #2E324470 1px solid;
   color: #EFF3F5;
   background-color: #2E3244;
   font-family: 'Pacifico', cursive;
-  position: relative;
-  top: 55vh;
+  position: absolute;
+  top: calc(470px + 15vh);
   box-sizing: border-box;
 }
 
