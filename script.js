@@ -7,22 +7,31 @@ const validation = document.querySelector(".main_validation");
 const success = document.querySelector(".main_success");
 const failed = document.querySelector(".main_failed");
 const button = document.querySelector(".main_button");
+const category = document.querySelector("#category");
+
+let currentVocabulary = eval(category.value);
 
 let App = {
   init: function() {
-    console.log(vocabulary);
+    console.log(allCategories, theDays, theMonths, theNumbers);
 
+    category.addEventListener('change', App.handleChooseCurrentVocabulary);
     button.addEventListener('click', App.handlePlayWords);
     response.addEventListener('input', App.handleValidation);
   },
 
+  handleChooseCurrentVocabulary: function () {
+    currentVocabulary = eval(category.value);
+    console.log(currentVocabulary);
+  },
+
   fr: function () {
-    const fr = vocabulary.map(i => i.fr.toLowerCase());
+    const fr = currentVocabulary.map(i => i.fr.toLowerCase());
     return fr
   },
 
   en: function () {
-    const en = vocabulary.map(i => i.en.toLowerCase());
+    const en = currentVocabulary.map(i => i.en.toLowerCase());
     return en  },
 
   wordsArray: function () {
@@ -41,7 +50,7 @@ let App = {
   },
 
   handleValidation: function() {
-    const wordFind = vocabulary.find(i => {
+    const wordFind = currentVocabulary.find(i => {
       return (i.fr.toLowerCase() === word.textContent.toLowerCase() ||
               i.en.toLowerCase() === word.textContent.toLowerCase())
     });
