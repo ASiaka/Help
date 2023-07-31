@@ -67,12 +67,13 @@ border: #2E324470 1px solid;
   background-color: #EFF3F5;
   border-radius: 3px;
   border: #2E324470 1px solid;
-  margin: 5px auto;
+  margin: 10px auto;
 }
 
 .main_word_style {
   width: 350px;
   padding: 15px;
+  margin-bottom: 10px;
   /* margin: 25px auto; */
   border-radius: 5px;
   color: #EFF3F5;
