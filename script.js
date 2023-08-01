@@ -22,6 +22,7 @@ let App = {
 
   handleChooseCurrentVocabulary: function () {
     currentVocabulary = eval(category.value);
+    App.handlePlayWords();
     console.log(currentVocabulary);
   },
 
@@ -42,7 +43,7 @@ let App = {
   },
 
   handlePlayWords: function () {
-    let wordIndex = Math.round(Math.random() * App.wordsArray().length);
+    let wordIndex = Math.round(Math.random() * (App.wordsArray().length - 1));
     word.classList.add("main_word_style");
     word.textContent = App.wordsArray()[wordIndex];
     response.value = "";
