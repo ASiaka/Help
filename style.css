@@ -128,7 +128,8 @@ border: #2E324470 1px solid;
 
 .main_button {
   width: 200px;
-  height: 45px;
+  /* height: 45px; */
+  padding: 5px;
   border-radius: 5px;
   color: #EFF3F5;
   background-color: #2E3244;
