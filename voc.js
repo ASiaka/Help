@@ -65,7 +65,7 @@ thePeople = [
 
 theAnimals = [
   { en: "pet", fr: "animal de compagnie" },
-  { en: "cat", fr: "chat " },
+  { en: "cat", fr: "chat" },
   { en: "goldfish", fr: "poisson rouge" },
   { en: "fish", fr: "poisson" },
   { en: "hamster", fr: "hamster" },
@@ -130,7 +130,7 @@ theFoods = [
 theMoments = [
  { en: "from", fr: "de/depuis" },
  { en: "now", fr: "maintenant" },
- { en: "time", fr: "temps " },
+ { en: "time", fr: "temps" },
  { en: "today", fr: "aujourd'hui" },
  { en: "tomorrow", fr: "demain" },
  { en: "yesterday", fr: "hier" },
@@ -172,7 +172,7 @@ theLocations = [
   { en: "park", fr: "parc" },
 ]
 
-theMood = [
+theMoods = [
   { en: "happy", fr: "content" },
   { en: "hungry", fr: "affamé" },
   { en: "sad", fr: "triste" },
@@ -186,6 +186,7 @@ theCharacteristics = [
   { en: "short", fr: "petit" },
   { en: "athletic", fr: "athlétique" },
   { en: "handsome", fr: "beau" },
+  { en: "beautiful", fr: "beau" },
   { en: "pretty", fr: "jolie" },
   { en: "bald", fr: "chauve" },
   { en: "friendly", fr: "amical" },
@@ -195,7 +196,6 @@ theCharacteristics = [
   { en: "talkative", fr: "bavard" },
   { en: "clever", fr: "intelligent" },
   { en: "funny", fr: "drôle" },
-  { en: "very", fr: "très" },
   { en: "small", fr: "petit" },
   { en: "large", fr: "large" },
   { en: "big", fr: "gros" },
@@ -433,7 +433,6 @@ theWordsElse = [
   { en: "here", fr: "ici" },
   { en: "expensive", fr: "cher" },
   { en: "smile", fr: "sourire" },
-  { en: "said", fr: "a dit" },
   { en: "really", fr: "vraiment" },
   { en: "ever", fr: "jamais" },
   { en: "which", fr: "qui" },
