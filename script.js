@@ -1,5 +1,7 @@
 console.log("Help");
 
+const arrayItems = [];
+
 const response = document.querySelector(".main_form #response");
 const contentMainWord = document.querySelector(".content_main_word");
 const word = document.querySelector(".main_word");
@@ -9,6 +11,11 @@ const success = document.querySelector(".main_success");
 const failed = document.querySelector(".main_failed");
 const button = document.querySelector(".main_button");
 const category = document.querySelector("#category");
+const addButton = document.querySelector(".add_word");
+const addForm = document.querySelector(".add_form_none");
+const submitWord = document.querySelector(".submit_word");
+const clearWords = document.querySelector(".supp_words");
+
 
 let currentVocabulary = eval(category.value);
 
@@ -23,6 +30,18 @@ let App = {
     button.addEventListener('click', App.handlePlayWords);
     // App.seeTheResponse();
     response.addEventListener('input', App.handleValidation);
+
+    addButton.addEventListener('click', () => {
+      console.log('addWord Ok');
+      addForm.classList.toggle("add_form");
+    });
+    addForm.addEventListener('submit', App.handleAddWord);
+    StorageItems.handlePushItems();
+    clearWords.addEventListener('click', () => {
+      console.log('suppWord Ok');
+      StorageItems.handleClearItems();
+    });
+    console.log(arrayItems);
   },
 
   handleChooseCurrentVocabulary: function () {
@@ -131,7 +150,29 @@ let App = {
           success.classList.remove("success");
           failed.classList.add("failed");
         }
-  }
+  },
+
+  handleAddWord: function (e) {
+    e.preventDefault();
+    console.log("submit Ok");
+
+    let enWord = document.querySelector("#en");
+    let frWord = document.querySelector("#fr");
+
+    const objectItems = {en: enWord.value, fr: frWord.value}
+    StorageItems.handleSetItem(localStorage.length+1, objectItems);
+    // StorageItems.handlePushItems();
+
+    enWord.value = "";
+    frWord.value = "";
+    enWord.focus();
+
+    console.log(frWord.name, arrayItems);
+  },
+
+  // handleRemoveWord: function (e) {
+  //   e.preventDefault();
+  // }
 
 }
 

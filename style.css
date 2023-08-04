@@ -71,6 +71,73 @@ border: #2E324470 1px solid;
   margin: 10px auto;
 }
 
+.add_word {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #EFF3F5;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  bottom: 70px;
+  right: 15px;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+}
+.supp_words {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(230, 78, 28);
+  color: #EFF3F5;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  bottom: 70px;
+  right: 50px;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4px;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+}
+
+.add_form_none {
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  color: #2E3244;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 110px;
+  right: 15px;
+}
+.add_form {
+  display: flex;
+}
+.add_form ul li{
+  margin: 10px;
+}
+.buttons_form {
+  display: flex;
+  justify-content: space-between;
+}
+.submit_word {
+  width: 210px;
+  height: 30px;
+  background-color: #2E3244;
+  color: #EFF3F5;
+  border-radius: 5px;
+  border: none;
+}
+
 .content_main_word {
   position: relative;
 }

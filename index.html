@@ -17,9 +17,25 @@
     <form action="" class="main_form">
       <input type="text" name="response" id="response" placeholder="Response">
     </form>
+    <button class="add_word">+</button>
+    <button class="supp_words">-</button>
+    <form action="" class="add_form_none">
+      <ul>
+        <li>
+          <label for="en">en&nbsp;:</label>
+          <input type="text" id="en" name="en" />
+        </li>
+        <li>
+          <label for="fr">fr&nbsp;:</label>
+          <input type="text" id="fr" name="fr" />
+        </li>
+      </ul>
+      <button type="submit" class="submit_word">Ajouter</button>
+    </form>
     <label for="category" id="main_label">By Category :
       <select name="category" id="category">
         <option value="allCategories" selected>All categories</option>
+        <option value="arrayItems">The array items</option>
         <option value="theDays">The days</option>
         <option value="theMonths">The months</option>
         <option value="theNumbers">The numbers</option>
@@ -51,6 +67,7 @@
 
   </footer>
 
+  <script src="./add.js"></script>
   <script src="./voc.js"></script>
   <script src="./vocabulary.js"></script>
   <script src="./script.js"></script>
