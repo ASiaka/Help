@@ -118,6 +118,7 @@ border: #2E324470 1px solid;
   position: fixed;
   bottom: 110px;
   right: 15px;
+  z-index: 1;
 }
 .add_form {
   display: flex;

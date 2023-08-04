@@ -163,6 +163,8 @@ let App = {
     StorageItems.handleSetItem(localStorage.length+1, objectItems);
     // StorageItems.handlePushItems();
 
+    // submitWord.disabled = true
+
     enWord.value = "";
     frWord.value = "";
     enWord.focus();
