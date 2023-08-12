@@ -15,7 +15,8 @@ const addButton = document.querySelector(".add_word");
 const addForm = document.querySelector(".add_form_none");
 const submitWord = document.querySelector(".submit_word");
 const clearWords = document.querySelector(".supp_words");
-
+const listButton = document.querySelector(".list_words");
+const listWords = document.querySelector(".list_none");
 
 let currentVocabulary = eval(category.value);
 
@@ -42,6 +43,24 @@ let App = {
       StorageItems.handleClearItems();
     });
     console.log(arrayItems);
+    listButton.addEventListener('click', () => {
+      // console.log("list", listWords);
+      // let word = document.querySelector(".word");
+      let words = document.querySelector(".words");
+      while (words.firstChild) {
+        words.removeChild(words.firstChild);  
+      }
+
+      listWords.classList.toggle("list");
+      
+      for (let index = 0; index < arrayItems.length; index++) {
+        let backgroundGray = "backgroung_white";
+        if (index % 2) {
+          backgroundGray = "backgroung_gray"
+        }
+        App.wordsList(arrayItems[index].en, arrayItems[index].fr, backgroundGray);
+      }
+    })
   },
 
   handleChooseCurrentVocabulary: function () {
@@ -174,7 +193,20 @@ let App = {
 
   // handleRemoveWord: function (e) {
   //   e.preventDefault();
-  // }
+  // },
+
+  wordsList: function (en, fr, backgroundGray) {
+    let words = document.querySelector(".words");
+    let word = document.createElement('div');
+    word.classList.add("word", backgroundGray);
+    let listEn = document.createElement('p');
+    let listFr = document.createElement('p');
+    listEn.textContent = en;
+    listFr.textContent = fr;
+
+    word.append(listEn, listFr);
+    words.append(word);
+  }
 
 }
 

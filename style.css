@@ -104,6 +104,72 @@ border: #2E324470 1px solid;
   padding-bottom: 4px;
   box-shadow: 1px 1px 1px 1px gainsboro;
 }
+.list_words {
+  width: 30px;
+  height: 30px;
+  padding-bottom: 18px;
+  background-color: white;
+  color: #EFF3F5;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  bottom: 70px;
+  left: 15px;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+}
+.list_none {
+  width: 350px;
+  height: 60%;
+  display: none;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  position: fixed;
+  bottom: 110px;
+  left: 15px;
+  z-index: 1;
+}
+@media (max-width: 450px) {
+  .list_none {
+    width: 75%;
+  }
+}
+.list {
+  display: block;
+}
+.list_title {
+  padding: 15px;
+  color: #EFF3F5;
+  background-color: #2E3244;
+  display: flex;
+  justify-content: space-evenly;
+}
+.list_title h1 {
+  width: 50%;
+  text-align: center;
+}
+.content_list {
+  height: calc(100% - 55px);
+  /* box-sizing: border-box; */
+  overflow-y: auto;
+}
+.backgroung_gray {
+  background-color: gainsboro;
+}
+.word {
+  padding: 7px 15px;
+  color: #2E3244;
+  display: flex;
+  justify-content: space-evenly;
+}
+.word p {
+  width: 50%;
+  text-align: center;
+}
 
 .add_form_none {
   width: 250px;
