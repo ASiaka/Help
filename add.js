@@ -7,8 +7,13 @@ const StorageItems = {
   },
 
   handlePushItems: function() {
+    for( let i = 0; i < arrayItems.length; i++){
+      arrayItems.shift();
+      console.log(arrayItems);
+    }
     for( let i = 0; i < localStorage.length; i++){
       arrayItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+      console.log(arrayItems);
     }
   },
   handleRemoveItem: function(item) {

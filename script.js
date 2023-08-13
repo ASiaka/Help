@@ -43,24 +43,9 @@ let App = {
       StorageItems.handleClearItems();
     });
     console.log(arrayItems);
-    listButton.addEventListener('click', () => {
-      // console.log("list", listWords);
-      // let word = document.querySelector(".word");
-      let words = document.querySelector(".words");
-      while (words.firstChild) {
-        words.removeChild(words.firstChild);  
-      }
+    listButton.addEventListener('click', App.handleWordsList)
 
-      listWords.classList.toggle("list");
-      
-      for (let index = 0; index < arrayItems.length; index++) {
-        let backgroundGray = "backgroung_white";
-        if (index % 2) {
-          backgroundGray = "backgroung_gray"
-        }
-        App.wordsList(arrayItems[index].en, arrayItems[index].fr, backgroundGray);
-      }
-    })
+    // App.handleRemoveWord();
   },
 
   handleChooseCurrentVocabulary: function () {
@@ -178,21 +163,34 @@ let App = {
     let enWord = document.querySelector("#en");
     let frWord = document.querySelector("#fr");
 
-    const objectItems = {en: enWord.value, fr: frWord.value}
-    StorageItems.handleSetItem(localStorage.length+1, objectItems);
-    // StorageItems.handlePushItems();
-
-    // submitWord.disabled = true
-
-    enWord.value = "";
-    frWord.value = "";
-    enWord.focus();
-
-    console.log(frWord.name, arrayItems);
+    if (en.value.trim() !== "" && fr.value.trim() !== "") {
+      console.log("is not empty");
+      const objectItems = {en: enWord.value, fr: frWord.value, key: localStorage.length+1}
+      StorageItems.handleSetItem(localStorage.length+1, objectItems);
+      StorageItems.handlePushItems();
+      enWord.value = "";
+      frWord.value = "";
+      enWord.focus();
+    } else {
+      if (en.value.trim() === "") {
+        console.log("en empty");
+        enWord.focus()
+      }
+      if (fr.value.trim() === "") {
+        console.log("fr empty");
+        frWord.focus()
+      }
+      if (en.value.trim() === "" & fr.value.trim() === "") {
+        console.log("en & fr empty");
+        enWord.focus()
+      }
+    }
   },
 
-  // handleRemoveWord: function (e) {
-  //   e.preventDefault();
+  // handleRemoveWord: function (e) {  
+  //   const currentWord = document.querySelector(".words");
+
+  //   console.log(localStorage.key(1), localStorage.getItem(2), currentWord);
   // },
 
   wordsList: function (en, fr, backgroundGray) {
@@ -206,6 +204,25 @@ let App = {
 
     word.append(listEn, listFr);
     words.append(word);
+  },
+
+  handleWordsList: function () {
+    // console.log("list", listWords);
+    // let word = document.querySelector(".word");
+    let words = document.querySelector(".words");
+    while (words.firstChild) {
+      words.removeChild(words.firstChild);  
+    }
+
+    listWords.classList.toggle("list");
+    
+    for (let index = 0; index < arrayItems.length; index++) {
+      let backgroundGray = "backgroung_white";
+      if (index % 2) {
+        backgroundGray = "backgroung_gray"
+      }
+      App.wordsList(arrayItems[index].en, arrayItems[index].fr, backgroundGray);
+    }
   }
 
 }
