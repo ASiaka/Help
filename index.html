@@ -18,20 +18,7 @@
     <form action="" class="main_form">
       <input type="text" name="response" id="response" placeholder="Response">
     </form>
-    <!-- <button class="add_word">+</button> -->
-    <!-- <button class="supp_words">-</button> -->
-    <!-- <button class="list_words">...</button> -->
-    <div class="list_none">
-      <div class="list_title">
-        <h1>en</h1>
-        <h1>fr</h1>
-      </div>
-      <div class="content_list">
-        <div class="words">
 
-        </div>
-      </div>
-    </div>
     <form action="" class="add_form_none">
       <ul>
         <li>
@@ -45,6 +32,7 @@
       </ul>
       <button type="submit" class="submit_word">Ajouter</button>
     </form>
+    
     <label for="category" id="main_label">By Category :
       <select name="category" id="category">
         <option value="allCategories" selected>All categories</option>
@@ -64,6 +52,7 @@
         <option value="theWordsElse">The words Else</option>
       </select>
     </label>
+
     <div class="content_main_word">
       <p class="main_word"></p>
     </div>
@@ -74,12 +63,24 @@
       <p class="main_success">&#10004;</p>
       <p class="main_failed">&#10008;</p>
     </div>
-    <button type="button" class="main_button">Start</button>
+    <!-- <button type="button" class="main_button">Start</button> -->
+
+    <div class="list_none">
+      <div class="list_title">
+        <h1>en</h1>
+        <h1>fr</h1>
+      </div>
+      <div class="content_list">
+        <div class="words">
+
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="footer_content">
     <i class="fa-solid fa-ellipsis-vertical"></i>
     <div>
-      <!-- <i class="fa-solid fa-play"></i> -->
+      <i class="fa-solid fa-play  main_button"></i>
       <i class="fa-solid fa-minus supp_words"></i>
       <i class="fa-solid fa-plus add_word"></i>
       <i class="fa-solid fa-list  list_words"></i>
