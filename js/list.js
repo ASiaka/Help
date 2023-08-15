@@ -22,6 +22,7 @@ const List = {
 
     addForm.classList.remove("add_form");
     listWords.classList.toggle("list");
+    RemoveWords.classList.remove("remove");
     
     for (let index = 0; index < arrayItems.length; index++) {
       let backgroundGray = "backgroung_white";

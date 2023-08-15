@@ -80,6 +80,45 @@ border: #2E324470 1px solid;
 .list_words {
 
 }
+
+.remove_none {
+  width: 250px;
+  height: 100px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  color: #2E3244;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 65px;
+  /* right: 15px; */
+  z-index: 1;
+}
+.remove {
+  display: flex;
+}
+.remove_button {
+  
+}
+.remove_oui {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 20px 10px 0 10px;
+}
+.remove_non {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 20px 10px 0 10px;
+}
+
 .list_none {
   width: 350px;
   height: 60%;
@@ -94,6 +133,9 @@ border: #2E324470 1px solid;
 }
 @media (max-width: 450px) {
   .list_none {
+    width: 75%;
+  }
+  .remove_none {
     width: 75%;
   }
 }

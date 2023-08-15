@@ -14,8 +14,12 @@ const category = document.querySelector("#category");
 const addButton = document.querySelector(".add_word");
 const addForm = document.querySelector(".add_form_none");
 const submitWord = document.querySelector(".submit_word");
-const clearWords = document.querySelector(".supp_words");
+// const clearWords = document.querySelector(".supp_words");
 const listButton = document.querySelector(".list_words");
 const listWords = document.querySelector(".list_none");
+const RemoveWords = document.querySelector(".remove_none");
+const buttonOui = document.querySelector(".remove_oui");
+const buttonNon = document.querySelector(".remove_non");
+const buttonRemove = document.querySelector(".supp_words");
 
 let currentVocabulary = eval(category.value);
