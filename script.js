@@ -34,12 +34,27 @@ let App = {
 
     addButton.addEventListener('click', () => {
       console.log('addWord Ok');
+      listWords.classList.remove("list");
       addForm.classList.toggle("add_form");
+
+      let enWord = document.querySelector("#en");
+      let frWord = document.querySelector("#fr");
+      if (en.value.trim() === "") {
+        console.log("en empty");
+        enWord.focus()
+      } else if (fr.value.trim() === "") {
+          console.log("fr empty");
+          frWord.focus()
+        }
     });
     addForm.addEventListener('submit', App.handleAddWord);
     StorageItems.handlePushItems();
     clearWords.addEventListener('click', () => {
       console.log('suppWord Ok');
+
+      listWords.classList.remove("list");
+      addForm.classList.remove("add_form");
+
       StorageItems.handleClearItems();
     });
     console.log(arrayItems);
@@ -80,6 +95,9 @@ let App = {
   },
 
   handlePlayWords: function () {
+    listWords.classList.remove("list");
+    addForm.classList.remove("add_form");
+
     let wordIndex = Math.round(Math.random() * (App.wordsArray().length - 1));
     word.classList.add("main_word_style");
     word.textContent = App.wordsArray()[wordIndex];
@@ -214,6 +232,7 @@ let App = {
       words.removeChild(words.firstChild);  
     }
 
+    addForm.classList.remove("add_form");
     listWords.classList.toggle("list");
     
     for (let index = 0; index < arrayItems.length; index++) {
