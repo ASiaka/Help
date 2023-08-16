@@ -9,17 +9,20 @@ const goodAnswer = document.querySelector(".main_response");
 const validation = document.querySelector(".main_validation");
 const success = document.querySelector(".main_success");
 const failed = document.querySelector(".main_failed");
-const button = document.querySelector(".main_button");
 const category = document.querySelector("#category");
-const addButton = document.querySelector(".add_word");
-const addForm = document.querySelector(".add_form_none");
-const submitWord = document.querySelector(".submit_word");
-// const clearWords = document.querySelector(".supp_words");
-const listButton = document.querySelector(".list_words");
-const listWords = document.querySelector(".list_none");
-const RemoveWords = document.querySelector(".remove_none");
-const buttonOui = document.querySelector(".remove_oui");
-const buttonNon = document.querySelector(".remove_non");
-const buttonRemove = document.querySelector(".supp_words");
+
+const buttonMenu = document.querySelector(".button_menu");
+const buttonPlay = document.querySelector(".button_play");
+const buttonMoins = document.querySelector(".button_moins");
+const buttonPlus = document.querySelector(".button_plus");
+const buttonList = document.querySelector(".button_list");
+
+const addWordsCard = document.querySelector(".add_words_card_none");
+const RemoveWordsCard = document.querySelector(".remove_words_card_none");
+const listWordsCard = document.querySelector(".list_words_card_none");
+
+const buttonAdd = document.querySelector(".button_add");
+const buttonOui = document.querySelector(".button_oui");
+const buttonNon = document.querySelector(".button_non");
 
 let currentVocabulary = eval(category.value);

@@ -5,17 +5,19 @@ let App = {
     Play.seeTheResponseButton();
 
     category.addEventListener('change', Play.handleChooseCurrentVocabulary);
-    button.addEventListener('click', Play.handlePlayWords);
+    buttonPlay.addEventListener('click', Play.handlePlayWords);
     response.addEventListener('input', Play.handleValidation);
 
-    addButton.addEventListener('click', () => {
+    buttonPlus.addEventListener('click', () => {
       console.log('addWord Ok');
-      listWords.classList.remove("list");
-      addForm.classList.toggle("add_form");
-      RemoveWords.classList.remove("remove");
+
+      listWordsCard.classList.remove("list_words_card");
+      addWordsCard.classList.toggle("add_words_card");
+      RemoveWordsCard.classList.remove("remove_words_card");
 
       let enWord = document.querySelector("#en");
       let frWord = document.querySelector("#fr");
+
       if (en.value.trim() === "") {
         console.log("en empty");
         enWord.focus()
@@ -24,27 +26,30 @@ let App = {
           frWord.focus()
         }
     });
-    addForm.addEventListener('submit', Add.handleAddWord);
+
+    addWordsCard.addEventListener('submit', Add.handleAddWord);
     Add.handlePushItems();
+
     buttonOui.addEventListener('click', () => {
       console.log('suppWord Ok');
 
-      // listWords.classList.remove("list");
-      // addForm.classList.remove("add_form");
-
       Remove.handleClearItems();
-      RemoveWords.classList.remove("remove");
+      RemoveWordsCard.classList.remove("remove_words_card");
     });
-    console.log(arrayItems);
-    listButton.addEventListener('click', List.handleWordsList);
-    buttonRemove.addEventListener('click', () => {
-      listWords.classList.remove("list");
-      addForm.classList.remove("add_form");
 
-      RemoveWords.classList.toggle("remove");
+    console.log(arrayItems);
+
+    buttonList.addEventListener('click', List.handleWordsList);
+
+    buttonMoins.addEventListener('click', () => {
+      listWordsCard.classList.remove("list_words_card");
+      addWordsCard.classList.remove("add_words_card");
+
+      RemoveWordsCard.classList.toggle("remove_words_card");
     });
+
     buttonNon.addEventListener('click', () => {
-      RemoveWords.classList.remove("remove");
+      RemoveWordsCard.classList.remove("remove_words_card");
     })
   },
 }

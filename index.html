@@ -14,23 +14,25 @@
     <h1  class="header_title">Help</h1>
     <h3 class="header_subtitle">Revise your vocabulary</h3>
   </header>
+
   <main class="main_content">
     <form action="" class="main_form">
       <input type="text" name="response" id="response" placeholder="Response">
     </form>
 
     <div class="main_validation">
-      <!-- <p class="main_success">&#10004;</p>
-      <p class="main_failed">&#10008;</p> -->
       <i class="fa-solid fa-check main_success"></i>
       <i class="fa-solid fa-xmark main_failed"></i>
     </div>
+
     <div class="content_main_word">
       <p class="main_word"></p>
     </div>
+
     <div class="content_response">
       <p class="main_response"></p>
     </div>
+
     <label for="category" id="main_label">By Category :
       <select name="category" id="category">
         <option value="allCategories" selected>All categories</option>
@@ -51,19 +53,7 @@
       </select>
     </label>
 
-    <div class="list_none">
-      <div class="list_title">
-        <h1>en</h1>
-        <h1>fr</h1>
-      </div>
-      <div class="content_list">
-        <div class="words">
-
-        </div>
-      </div>
-    </div>
-
-    <form action="" class="add_form_none">
+    <form action="" class="add_words_card_none">
       <ul>
         <li>
           <label for="en">en&nbsp;:</label>
@@ -74,24 +64,37 @@
           <input type="text" id="fr" name="fr" />
         </li>
       </ul>
-      <button type="submit" class="submit_word">Ajouter</button>
+      <button type="submit" class="button_add">Ajouter</button>
     </form>
 
-    <div class="remove_none">
+    <div class="remove_words_card_none">
       <p>Supprimer tout le volcabulaire?</p>
-      <div class="remove_button">
-        <button class="remove_oui">Oui</button>
-        <button class="remove_non">Non</button>
+      <div class="remove_buttons">
+        <button class="button_oui">Oui</button>
+        <button class="button_non">Non</button>
       </div>
-    </div>    
+    </div> 
+    
+    <div class="list_words_card_none">
+      <div class="list_title">
+        <h1>en</h1>
+        <h1>fr</h1>
+      </div>
+      <div class="content_list">
+        <div class="words">
+
+        </div>
+      </div>
+    </div>
   </main>
+  
   <footer class="footer_content">
-    <i class="fa-solid fa-ellipsis-vertical"></i>
+    <i class="fa-solid fa-ellipsis-vertical button_menu"></i>
     <div>
-      <i class="fa-solid fa-play  main_button"></i>
-      <i class="fa-solid fa-minus supp_words"></i>
-      <i class="fa-solid fa-plus add_word"></i>
-      <i class="fa-solid fa-list  list_words"></i>
+      <i class="fa-solid fa-play  button_play"></i>
+      <i class="fa-solid fa-minus button_moins"></i>
+      <i class="fa-solid fa-plus button_plus"></i>
+      <i class="fa-solid fa-list  button_list"></i>
     </div>
   </footer>
 

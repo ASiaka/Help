@@ -30,6 +30,8 @@ body {
 
 /*MAIN*/
 
+/*Response*/
+
 .main_content {
   /* height: calc(100vh - 165px);
   padding-top: 115px;
@@ -40,7 +42,6 @@ body {
   align-items: center;
   font-family: 'Pacifico', cursive;
 }
-
 .main_form {
   width: 100%;
   box-sizing: border-box;
@@ -51,7 +52,6 @@ body {
   align-items: center;
   align-items: center;
 }
-
 #response {
 width: 250px;
 height: 25px;
@@ -59,152 +59,44 @@ border-radius: 3px;
 border: #2E324470 1px solid;
 }
 
-/* #main_label {
+/*Validation*/
 
-} */
-
-#category {
-  color: #2E3244;
-  background-color: #EFF3F5;
-  border-radius: 3px;
-  border: #2E324470 1px solid;
-  margin: 20px auto;
-}
-
-.add_word {
-
-}
-.supp_words {
-
-}
-.list_words {
-
-}
-
-.remove_none {
-  width: 250px;
-  height: 100px;
-  background-color: white;
-  box-shadow: 1px 1px 1px 1px gainsboro;
-  color: #2E3244;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 65px;
-  /* right: 15px; */
-  z-index: 1;
-}
-.remove {
-  display: flex;
-}
-.remove_button {
-  
-}
-.remove_oui {
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 15px;
-  margin: 20px 10px 0 10px;
-}
-.remove_non {
-  background-color: blue;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 15px;
-  margin: 20px 10px 0 10px;
-}
-
-.list_none {
-  width: 350px;
-  height: 60%;
-  display: none;
-  padding: 15px;
-  background-color: white;
-  box-shadow: 1px 1px 1px 1px gainsboro;
-  position: fixed;
-  bottom: 65px;
-  /* left: 15px; */
-  z-index: 1;
-}
-@media (max-width: 450px) {
-  .list_none {
-    width: 75%;
-  }
-  .remove_none {
-    width: 75%;
-  }
-}
-.list {
-  display: block;
-}
-.list_title {
-  padding: 15px;
-  color: #EFF3F5;
-  background-color: #2E3244;
-  display: flex;
-  justify-content: space-evenly;
-}
-.list_title h1 {
-  width: 50%;
-  text-align: center;
-}
-.content_list {
-  height: calc(100% - 55px);
-  /* box-sizing: border-box; */
-  overflow-y: auto;
-}
-.backgroung_gray {
-  background-color: gainsboro;
-}
-.word {
-  padding: 7px 15px;
-  color: #2E3244;
-  display: flex;
-  justify-content: space-evenly;
-}
-.word p {
-  width: 50%;
-  text-align: center;
-}
-
-.add_form_none {
-  width: 250px;
-  height: 150px;
-  background-color: white;
-  box-shadow: 1px 1px 1px 1px gainsboro;
-  color: #2E3244;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 65px;
-  /* right: 15px; */
-  z-index: 1;
-}
-.add_form {
-  display: flex;
-}
-.add_form ul li{
-  margin: 10px;
-}
-.buttons_form {
+.main_validation {
+  width: 80px;
+  height: 35px;
+  padding: 3px;
   display: flex;
   justify-content: space-between;
-}
-.submit_word {
-  width: 210px;
-  height: 30px;
-  background-color: #2E3244;
-  color: #EFF3F5;
+  align-items: center;
+  color: gainsboro;
+  background-color: #EFF3F5;
+  box-sizing: border-box;
   border-radius: 5px;
-  border: none;
+  border: gainsboro 1px solid;
+  margin: 15px;
 }
+.main_success {
+  width: 20px;
+  padding: 5px !important;
+  margin: 0 !important;
+  border-radius: 5px;
+  text-align: center;
+}
+.success {
+  background-color: green;
+}
+.main_failed {
+  width: 20px;
+  padding: 5px !important;
+  margin: 0 !important;
+  border-radius: 5px;
+  text-align: center;
+}
+.failed {
+  background-color: red;
+}
+
+/*Word*/
 
 .content_main_word {
   position: relative;
@@ -220,6 +112,8 @@ border: #2E324470 1px solid;
   text-align: center;
   box-sizing: border-box;
 }
+
+/*button view response*/
 
 .span_button_none {
   width: 25px;
@@ -264,6 +158,8 @@ border: #2E324470 1px solid;
   display: flex;
 }
 
+/*Good answer*/
+
 .content_response {
   width: 350px;
   height: 30px;
@@ -272,52 +168,14 @@ border: #2E324470 1px solid;
   text-align: center;
 }
 
-.main_validation {
-  width: 80px;
-  height: 35px;
-  padding: 3px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: gainsboro;
+/*Category*/
+
+#category {
+  color: #2E3244;
   background-color: #EFF3F5;
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: gainsboro 1px solid;
-  margin: 15px;
-}
-
-.main_success {
-  width: 20px;
-  padding: 5px !important;
-  margin: 0 !important;
-  border-radius: 5px;
-  text-align: center;
-}
-.success {
-  background-color: green;
-}
-
-.main_failed {
-  width: 20px;
-  padding: 5px !important;
-  margin: 0 !important;
-  border-radius: 5px;
-  text-align: center;
-}
-.failed {
-  background-color: red;
-}
-
-.main_button {
-  /* width: 200px;
-  padding: 5px;
-  border-radius: 5px;
-  color: #EFF3F5;
-  background-color: #2E3244;
-  font-family: 'Pacifico', cursive;
-  box-sizing: border-box;
-  margin-bottom: 25px; */
+  border-radius: 3px;
+  border: #2E324470 1px solid;
+  margin: 20px auto;
 }
 
 @media (max-width: 450px) {
@@ -327,9 +185,6 @@ border: #2E324470 1px solid;
   .content_response {
     width: 250px;
   }
-  /* .main_button {
-    width: 150px;
-  } */
 }
 @media (max-width: 350px) {
   .main_word_style {
@@ -338,10 +193,137 @@ border: #2E324470 1px solid;
   .content_response {
     width: 200px;
   }
-  /* .main_button {
-    width: 100px;
-  } */
 }
+
+/*Add words*/
+
+.add_words_card_none {
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  color: #2E3244;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 65px;
+  /* right: 15px; */
+  z-index: 1;
+}
+.add_words_card {
+  display: flex;
+}
+.add_words_card ul li{
+  margin: 10px;
+}
+.button_add {
+  width: 210px;
+  height: 30px;
+  background-color: #2E3244;
+  color: #EFF3F5;
+  border-radius: 5px;
+  border: none;
+}
+
+/*List words*/
+
+.list_words_card_none {
+  width: 350px;
+  height: 60%;
+  display: none;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  position: fixed;
+  bottom: 65px;
+  /* left: 15px; */
+  z-index: 1;
+}
+.list_words_card {
+  display: block;
+}
+.list_title {
+  padding: 15px;
+  color: #EFF3F5;
+  background-color: #2E3244;
+  display: flex;
+  justify-content: space-evenly;
+}
+.list_title h1 {
+  width: 50%;
+  text-align: center;
+}
+.content_list {
+  height: calc(100% - 55px);
+  /* box-sizing: border-box; */
+  overflow-y: auto;
+}
+.backgroung_gray {
+  background-color: gainsboro;
+}
+.word {
+  padding: 7px 15px;
+  color: #2E3244;
+  display: flex;
+  justify-content: space-evenly;
+}
+.word p {
+  width: 50%;
+  text-align: center;
+}
+
+/*Remove words*/
+
+.remove_words_card_none {
+  width: 250px;
+  height: 100px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  color: #2E3244;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 65px;
+  /* right: 15px; */
+  z-index: 1;
+}
+.remove_words_card {
+  display: flex;
+}
+.button_oui {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 20px 10px 0 10px;
+}
+.button_non {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 20px 10px 0 10px;
+}
+
+@media (max-width: 450px) {
+  .list_words_card_none {
+    width: 75%;
+  }
+  .remove_words_card_none {
+    width: 75%;
+  }
+}
+
+/* .buttons_form {
+  display: flex;
+  justify-content: space-between;
+} */
 
 /*FOOTER*/
 

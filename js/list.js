@@ -20,9 +20,9 @@ const List = {
       words.removeChild(words.firstChild);  
     }
 
-    addForm.classList.remove("add_form");
-    listWords.classList.toggle("list");
-    RemoveWords.classList.remove("remove");
+    addWordsCard.classList.remove("add_words_card");
+    listWordsCard.classList.toggle("list_words_card");
+    RemoveWordsCard.classList.remove("remove_words_card");
     
     for (let index = 0; index < arrayItems.length; index++) {
       let backgroundGray = "backgroung_white";

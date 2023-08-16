@@ -33,9 +33,9 @@ const Play = {
   },
 
   handlePlayWords: function () {
-    listWords.classList.remove("list");
-    addForm.classList.remove("add_form");
-    RemoveWords.classList.remove("remove");
+    listWordsCard.classList.remove("list_words_card");
+    addWordsCard.classList.remove("add_words_card");
+    RemoveWordsCard.classList.remove("remove_words_card");
 
     let wordIndex = Math.round(Math.random() * (Play.wordsArray().length - 1));
     word.classList.add("main_word_style");
