@@ -42,7 +42,7 @@ body {
   align-items: center;
   font-family: 'Pacifico', cursive;
 }
-.main_form {
+.form_response {
   width: 100%;
   box-sizing: border-box;
   padding: 35px;
@@ -61,7 +61,7 @@ border: #2E324470 1px solid;
 
 /*Validation*/
 
-.main_validation {
+.validation_word {
   width: 80px;
   height: 35px;
   padding: 3px;
@@ -75,7 +75,7 @@ border: #2E324470 1px solid;
   border: gainsboro 1px solid;
   margin: 15px;
 }
-.main_success {
+.success_word {
   width: 20px;
   padding: 5px !important;
   margin: 0 !important;
@@ -85,7 +85,7 @@ border: #2E324470 1px solid;
 .success {
   background-color: green;
 }
-.main_failed {
+.failed_word {
   width: 20px;
   padding: 5px !important;
   margin: 0 !important;
@@ -98,11 +98,10 @@ border: #2E324470 1px solid;
 
 /*Word*/
 
-.content_main_word {
+.content_random_word {
   position: relative;
 }
-
-.main_word_style {
+.random_word_style {
   width: 350px;
   padding: 15px;
   margin-bottom: 25px;
@@ -160,7 +159,7 @@ border: #2E324470 1px solid;
 
 /*Good answer*/
 
-.content_response {
+.content_good_response {
   width: 350px;
   height: 30px;
   justify-content: center;
@@ -179,18 +178,18 @@ border: #2E324470 1px solid;
 }
 
 @media (max-width: 450px) {
-  .main_word_style {
+  .random_word_style {
     width: 250px;
   }
-  .content_response {
+  .content_good_response {
     width: 250px;
   }
 }
 @media (max-width: 350px) {
-  .main_word_style {
+  .random_word_style {
     width: 200px;
   }
-  .content_response {
+  .content_good_response {
     width: 200px;
   }
 }

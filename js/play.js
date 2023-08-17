@@ -38,7 +38,7 @@ const Play = {
     RemoveWordsCard.classList.remove("remove_words_card");
 
     let wordIndex = Math.round(Math.random() * (Play.wordsArray().length - 1));
-    word.classList.add("main_word_style");
+    word.classList.add("random_word_style");
     word.textContent = Play.wordsArray()[wordIndex];
     response.value = "";
     response.focus();
