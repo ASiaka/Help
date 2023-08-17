@@ -25,8 +25,8 @@ const Play = {
 
   wordFind: function() {
     const find = currentVocabulary.find(i => {
-      return (i.fr.toLowerCase() === word.textContent.toLowerCase() ||
-              i.en.toLowerCase() === word.textContent.toLowerCase())
+      return (i.fr.toLowerCase() === randomWord.textContent.toLowerCase() ||
+              i.en.toLowerCase() === randomWord.textContent.toLowerCase())
     });
     console.log(find);
     return find
@@ -38,8 +38,8 @@ const Play = {
     RemoveWordsCard.classList.remove("remove_words_card");
 
     let wordIndex = Math.round(Math.random() * (Play.wordsArray().length - 1));
-    word.classList.add("random_word_style");
-    word.textContent = Play.wordsArray()[wordIndex];
+    randomWord.classList.add("random_word_style");
+    randomWord.textContent = Play.wordsArray()[wordIndex];
     response.value = "";
     response.focus();
 
@@ -53,12 +53,12 @@ const Play = {
     let spanButton = document.createElement('button');
     spanButton.textContent = "?";
     spanButton.className = "span_button_none";
-    contentMainWord.append(spanButton);
+    contentRandomWord.append(spanButton);
 
     let spanResponse = document.createElement('span');
     // spanResponse.textContent = "That's Ok";
     spanResponse.className = "span_response_none";
-    contentMainWord.append(spanResponse);
+    contentRandomWord.append(spanResponse);
 
     spanButton.addEventListener('click', () => {
       spanResponse.classList.toggle("span_response");
@@ -70,9 +70,9 @@ const Play = {
     console.log(Play.wordFind());
     let spanResponse = document.querySelector('.span_response_none');
 
-    if (word.textContent.toLowerCase() === Play.wordFind().en.toLowerCase()) {
+    if (randomWord.textContent.toLowerCase() === Play.wordFind().en.toLowerCase()) {
       spanResponse.textContent = Play.wordFind().fr;
-    } else if (word.textContent.toLowerCase() === Play.wordFind().fr.toLowerCase()) {
+    } else if (randomWord.textContent.toLowerCase() === Play.wordFind().fr.toLowerCase()) {
         spanResponse.textContent = Play.wordFind().en;
       } else {
           spanResponse.textContent = "";
@@ -80,35 +80,35 @@ const Play = {
   },
 
   handleValidation: function() {
-    if (word.textContent.toLowerCase() === Play.wordFind().en.toLowerCase() && response.value.toLowerCase() === Play.wordFind().fr.toLowerCase()) {
-      success.classList.add("success");
-      failed.classList.remove("failed");
+    if (randomWord.textContent.toLowerCase() === Play.wordFind().en.toLowerCase() && response.value.toLowerCase() === Play.wordFind().fr.toLowerCase()) {
+      successWord.classList.add("success");
+      failedWord.classList.remove("failed");
 
-      goodAnswer.textContent = Play.wordFind().fr;
+      goodResponse.textContent = Play.wordFind().fr;
       response.value = "";
 
       setTimeout(() => {
         Play.handlePlayWords();
-        success.classList.remove("success");
-        goodAnswer.textContent = "";
+        successWord.classList.remove("success");
+        goodResponse.textContent = "";
       }, 1500);
 
-    } else if (word.textContent.toLowerCase() === Play.wordFind().fr.toLowerCase() && response.value.toLowerCase() === Play.wordFind().en.toLowerCase()) {
-        success.classList.add("success");
-        failed.classList.remove("failed");
+    } else if (randomWord.textContent.toLowerCase() === Play.wordFind().fr.toLowerCase() && response.value.toLowerCase() === Play.wordFind().en.toLowerCase()) {
+        successWord.classList.add("success");
+        failedWord.classList.remove("failed");
 
-        goodAnswer.textContent = Play.wordFind().en;
+        goodResponse.textContent = Play.wordFind().en;
         response.value = "";
 
         setTimeout(() => {
           Play.handlePlayWords();
-          success.classList.remove("success");
-          goodAnswer.textContent = "";
+          successWord.classList.remove("success");
+          goodResponse.textContent = "";
         }, 1500);
 
       } else {
-          success.classList.remove("success");
-          failed.classList.add("failed");
+          successWord.classList.remove("success");
+          failedWord.classList.add("failed");
         }
   },
 

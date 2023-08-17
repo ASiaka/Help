@@ -3,12 +3,15 @@ console.log("Select.js");
 const arrayItems = [];
 
 const response = document.querySelector(".form_response #response");
-const contentMainWord = document.querySelector(".content_random_word");
-const word = document.querySelector(".random_word");
-const goodAnswer = document.querySelector(".good_response");
-const validation = document.querySelector(".validation_word");
-const success = document.querySelector(".success_word");
-const failed = document.querySelector(".failed_word");
+
+const validationWord = document.querySelector(".validation_word");
+const goodResponse = document.querySelector(".good_response");
+const successWord = document.querySelector(".success_word");
+const failedWord = document.querySelector(".failed_word");
+
+const contentRandomWord = document.querySelector(".content_random_word");
+const randomWord = document.querySelector(".random_word");
+
 const category = document.querySelector("#category");
 
 const buttonMenu = document.querySelector(".button_menu");

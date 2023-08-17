@@ -8,11 +8,11 @@ const Add = {
   handlePushItems: function() {
     for( let i = 0; i < arrayItems.length; i++){
       arrayItems.shift();
-      console.log(arrayItems);
+      console.log(i, arrayItems.length, localStorage.length);
     }
     for( let i = 0; i < localStorage.length; i++){
       arrayItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
-      console.log(arrayItems);
+      // console.log(arrayItems.length, localStorage.length);
     }
   },
 
@@ -20,29 +20,30 @@ const Add = {
     e.preventDefault();
     console.log("submit Ok");
 
-    let enWord = document.querySelector("#en");
-    let frWord = document.querySelector("#fr");
+    let addWordEn = document.querySelector("#add_word_en");
+    let addWordFr = document.querySelector("#add_word_fr");
 
-    if (en.value.trim() !== "" && fr.value.trim() !== "") {
+    if (addWordEn.value.trim() !== "" && addWordFr.value.trim() !== "") {
       console.log("is not empty");
-      const objectItems = {en: enWord.value, fr: frWord.value, key: localStorage.length+1}
+      const objectItems = {en: addWordEn.value, fr: addWordFr.value, key: localStorage.length+1}
       Add.handleSetItem(localStorage.length+1, objectItems);
+      addWordEn.value = "";
+      addWordFr.value = "";
+      addWordEn.focus();
+
       Add.handlePushItems();
-      enWord.value = "";
-      frWord.value = "";
-      enWord.focus();
     } else {
-      if (en.value.trim() === "") {
+      if (addWordEn.value.trim() === "") {
         console.log("en empty");
-        enWord.focus()
+        addWordEn.focus()
       }
-      if (fr.value.trim() === "") {
+      if (addWordFr.value.trim() === "") {
         console.log("fr empty");
-        frWord.focus()
+        addWordFr.focus()
       }
-      if (en.value.trim() === "" & fr.value.trim() === "") {
+      if (addWordEn.value.trim() === "" & addWordFr.value.trim() === "") {
         console.log("en & fr empty");
-        enWord.focus()
+        addWordEn.focus()
       }
     }
   }

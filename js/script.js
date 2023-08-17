@@ -4,42 +4,34 @@ let App = {
   init: function() {
     Play.seeTheResponseButton();
 
-    category.addEventListener('change', Play.handleChooseCurrentVocabulary);
-    buttonPlay.addEventListener('click', Play.handlePlayWords);
-    response.addEventListener('input', Play.handleValidation);
-
-    buttonPlus.addEventListener('click', () => {
-      console.log('addWord Ok');
-
-      listWordsCard.classList.remove("list_words_card");
-      addWordsCard.classList.toggle("add_words_card");
-      RemoveWordsCard.classList.remove("remove_words_card");
-
-      let enWord = document.querySelector("#en");
-      let frWord = document.querySelector("#fr");
-
-      if (en.value.trim() === "") {
-        console.log("en empty");
-        enWord.focus()
-      } else if (fr.value.trim() === "") {
-          console.log("fr empty");
-          frWord.focus()
-        }
-    });
-
-    addWordsCard.addEventListener('submit', Add.handleAddWord);
     Add.handlePushItems();
 
-    buttonOui.addEventListener('click', () => {
-      console.log('suppWord Ok');
+    category.addEventListener('change', Play.handleChooseCurrentVocabulary);
+    
+    buttonPlay.addEventListener('click', Play.handlePlayWords);
+    response.addEventListener('input', Play.handleValidation);
+    response.addEventListener('change', Play.handleValidation);
 
-      Remove.handleClearItems();
-      RemoveWordsCard.classList.remove("remove_words_card");
-    });
-
-    console.log(arrayItems);
 
     buttonList.addEventListener('click', List.handleWordsList);
+
+    buttonPlus.addEventListener('click', () => {
+      addWordsCard.classList.toggle("add_words_card");
+      listWordsCard.classList.remove("list_words_card");
+      RemoveWordsCard.classList.remove("remove_words_card");
+
+      let addWordEn = document.querySelector("#add_word_en");
+      let addWordFr = document.querySelector("#add_word_fr");
+
+      if (addWordEn.value.trim() === "") {
+        console.log("en empty");
+        addWordEn.focus()
+      } else if (addWordFr.value.trim() === "") {
+          console.log("fr empty");
+          addWordFr.focus()
+        }
+    });
+    addWordsCard.addEventListener('submit', Add.handleAddWord);
 
     buttonMoins.addEventListener('click', () => {
       listWordsCard.classList.remove("list_words_card");
@@ -47,7 +39,13 @@ let App = {
 
       RemoveWordsCard.classList.toggle("remove_words_card");
     });
+    buttonOui.addEventListener('click', () => {
+      console.log('suppWord Ok');
 
+      Remove.handleClearItems();
+      // Add.handlePushItems();
+      RemoveWordsCard.classList.remove("remove_words_card");
+    });
     buttonNon.addEventListener('click', () => {
       RemoveWordsCard.classList.remove("remove_words_card");
     })
