@@ -16,6 +16,23 @@ const Add = {
     }
   },
 
+  handleOpenAddWordsCard: function () {
+    addWordsCard.classList.toggle("add_words_card");
+    listWordsCard.classList.remove("list_words_card");
+    RemoveWordsCard.classList.remove("remove_words_card");
+
+    let addWordEn = document.querySelector("#add_word_en");
+    let addWordFr = document.querySelector("#add_word_fr");
+
+    if (addWordEn.value.trim() === "") {
+      console.log("en empty");
+      addWordEn.focus()
+    } else if (addWordFr.value.trim() === "") {
+        console.log("fr empty");
+        addWordFr.focus()
+      }
+  },
+
   handleAddWord: function (e) {
     e.preventDefault();
     console.log("submit Ok");

@@ -1,7 +1,5 @@
 console.log("Select.js");
 
-const arrayItems = [];
-
 const response = document.querySelector(".form_response #response");
 
 const validationWord = document.querySelector(".validation_word");
@@ -12,7 +10,8 @@ const failedWord = document.querySelector(".failed_word");
 const contentRandomWord = document.querySelector(".content_random_word");
 const randomWord = document.querySelector(".random_word");
 
-const category = document.querySelector("#category");
+const selectLanguage = document.querySelector("#select_language");
+// const category = document.querySelector("#category");
 
 const buttonMenu = document.querySelector(".button_menu");
 const buttonPlay = document.querySelector(".button_play");
@@ -28,4 +27,10 @@ const buttonAdd = document.querySelector(".button_add");
 const buttonOui = document.querySelector(".button_oui");
 const buttonNon = document.querySelector(".button_non");
 
-let currentVocabulary = eval(category.value);
+const arrayItems = [];
+let theTwoLanguages = [];
+const languageOne = [];
+const languageTwo = [];
+let usedLanguage = eval(selectLanguage.value);
+let currentVocabulary = arrayItems;
+// let currentVocabulary = eval(category.value);

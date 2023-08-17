@@ -1,26 +1,56 @@
 console.log("Play.js");
 
 const Play = {
-  handleChooseCurrentVocabulary: function () {
-    currentVocabulary = eval(category.value);
+  // handleChooseCurrentVocabulary: function () {
+  //   currentVocabulary = eval(category.value);
+  //   Play.handlePlayWords();
+  //   console.log(currentVocabulary);
+  // },
+
+  handleChooseLangToUse: function () {
+    Play.en();
+    Play.fr();
+    Play.wordFind();
+    usedLanguage = eval(selectLanguage.value);
     Play.handlePlayWords();
-    console.log(currentVocabulary);
+    console.log(usedLanguage);
+  },
+  
+  en: function () {
+    currentVocabulary.map(i => languageOne.push(i.en.toLowerCase()));
+    return languageOne
   },
 
   fr: function () {
-    const fr = currentVocabulary.map(i => i.fr.toLowerCase());
-    return fr
+    currentVocabulary.map(i => languageTwo.push(i.fr.toLowerCase()));
+    return languageTwo
   },
 
-  en: function () {
-    const en = currentVocabulary.map(i => i.en.toLowerCase());
-    return en  },
+  enAndFr: function () {
+    currentVocabulary.map(i => theTwoLanguages.push(i.en.toLowerCase(), i.fr.toLowerCase()));
+    return theTwoLanguages
+  },
 
-  wordsArray: function () {
-    const newArray = [];
-    Play.fr().map((i) => newArray.push(i));
-    Play.en().map((i) => newArray.push(i));
-    return newArray
+  handlePlayWords: function () {
+    if (currentVocabulary.length > 3) {
+      listWordsCard.classList.remove("list_words_card");
+      addWordsCard.classList.remove("add_words_card");
+      RemoveWordsCard.classList.remove("remove_words_card");
+  
+      let wordIndex = Math.round(Math.random() * (usedLanguage.length - 1));
+      randomWord.classList.add("random_word_style");
+      randomWord.textContent = usedLanguage[wordIndex];
+      response.value = "";
+      response.focus();
+  
+      const eyesButton = document.querySelector(".span_button_none");
+      eyesButton.classList.add("span_button");
+  
+      Play.seeTheResponse();
+    } else {
+        alert("Vous devez ajouter 3 vocabulaires minimum");
+        Add.handleOpenAddWordsCard();
+      }
   },
 
   wordFind: function() {
@@ -30,23 +60,6 @@ const Play = {
     });
     console.log(find);
     return find
-  },
-
-  handlePlayWords: function () {
-    listWordsCard.classList.remove("list_words_card");
-    addWordsCard.classList.remove("add_words_card");
-    RemoveWordsCard.classList.remove("remove_words_card");
-
-    let wordIndex = Math.round(Math.random() * (Play.wordsArray().length - 1));
-    randomWord.classList.add("random_word_style");
-    randomWord.textContent = Play.wordsArray()[wordIndex];
-    response.value = "";
-    response.focus();
-
-    const eyesButton = document.querySelector(".span_button_none");
-    eyesButton.classList.add("span_button");
-
-    Play.seeTheResponse();
   },
 
   seeTheResponseButton: function () {

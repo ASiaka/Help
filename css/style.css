@@ -167,15 +167,25 @@ border: #2E324470 1px solid;
   text-align: center;
 }
 
-/*Category*/
+/*Used language*/
 
-#category {
+#select_language {
   color: #2E3244;
   background-color: #EFF3F5;
   border-radius: 3px;
   border: #2E324470 1px solid;
   margin: 20px auto;
 }
+
+/*Category*/
+
+/* #category {
+  color: #2E3244;
+  background-color: #EFF3F5;
+  border-radius: 3px;
+  border: #2E324470 1px solid;
+  margin: 20px auto;
+} */
 
 @media (max-width: 450px) {
   .random_word_style {
@@ -285,6 +295,7 @@ border: #2E324470 1px solid;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   position: fixed;
   bottom: 65px;
   /* right: 15px; */
@@ -314,8 +325,13 @@ border: #2E324470 1px solid;
   .list_words_card_none {
     width: 75%;
   }
-  .remove_words_card_none {
+  /* .remove_words_card_none {
     width: 75%;
+  } */
+}
+@media (max-width: 300px) {
+  .remove_words_card_none {
+    width: 85%;
   }
 }
 
