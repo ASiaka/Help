@@ -23,11 +23,12 @@ const List = {
     addWordsCard.classList.remove("add_words_card");
     listWordsCard.classList.toggle("list_words_card");
     RemoveWordsCard.classList.remove("remove_words_card");
+    moreWordsCard.classList.remove("more_card");
     
     for (let index = 0; index < arrayItems.length; index++) {
       let backgroundGray = "backgroung_white";
       if (index % 2) {
-        backgroundGray = "backgroung_gray"
+        backgroundGray = "background_gray"
       }
       List.wordsList(arrayItems[index].en, arrayItems[index].fr, backgroundGray);
     }

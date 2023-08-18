@@ -177,16 +177,6 @@ border: #2E324470 1px solid;
   margin: 20px auto;
 }
 
-/*Category*/
-
-/* #category {
-  color: #2E3244;
-  background-color: #EFF3F5;
-  border-radius: 3px;
-  border: #2E324470 1px solid;
-  margin: 20px auto;
-} */
-
 @media (max-width: 450px) {
   .random_word_style {
     width: 250px;
@@ -202,6 +192,31 @@ border: #2E324470 1px solid;
   .content_good_response {
     width: 200px;
   }
+}
+
+/*More words*/
+
+.more_card_none {
+  width: 200px;
+  padding: 15px;
+  display: none;
+  background-color: white;
+  /* box-shadow: 1px 1px 1px 1px gainsboro; */
+  position: fixed;
+  bottom: 65px;
+  left: 15px;
+  z-index: 1;
+}
+.more_card {
+  display: block;
+}
+.more {
+  padding: 10px;
+  border-bottom: 1px gainsboro solid;
+}
+.more:hover {
+  background-color: #EFF3F5;
+  border-bottom: 1px #EFF3F5 solid;
 }
 
 /*Add words*/
@@ -269,7 +284,7 @@ border: #2E324470 1px solid;
   /* box-sizing: border-box; */
   overflow-y: auto;
 }
-.backgroung_gray {
+.background_gray {
   background-color: gainsboro;
 }
 .word {
@@ -325,20 +340,12 @@ border: #2E324470 1px solid;
   .list_words_card_none {
     width: 75%;
   }
-  /* .remove_words_card_none {
-    width: 75%;
-  } */
 }
 @media (max-width: 300px) {
   .remove_words_card_none {
     width: 85%;
   }
 }
-
-/* .buttons_form {
-  display: flex;
-  justify-content: space-between;
-} */
 
 /*FOOTER*/
 

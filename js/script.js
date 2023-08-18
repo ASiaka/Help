@@ -9,11 +9,11 @@ let App = {
     console.log(currentVocabulary, Play.en(), Play.fr(), Play.enAndFr());
 
     selectLanguage.addEventListener('change', Play.handleChooseLangToUse);
-    // category.addEventListener('change', Play.handleChooseCurrentVocabulary);
     
     buttonPlay.addEventListener('click', Play.handlePlayWords);
     response.addEventListener('input', Play.handleValidation);
     response.addEventListener('change', Play.handleValidation);
+    formResponse.addEventListener('submit', Play.handleValidation);
 
 
     buttonList.addEventListener('click', List.handleWordsList);
@@ -24,6 +24,7 @@ let App = {
     buttonMoins.addEventListener('click', () => {
       listWordsCard.classList.remove("list_words_card");
       addWordsCard.classList.remove("add_words_card");
+      moreWordsCard.classList.remove("more_card");
 
       RemoveWordsCard.classList.toggle("remove_words_card");
     });
@@ -36,6 +37,14 @@ let App = {
     });
     buttonNon.addEventListener('click', () => {
       RemoveWordsCard.classList.remove("remove_words_card");
+    });
+
+    buttonMore.addEventListener('click', () => {
+      listWordsCard.classList.remove("list_words_card");
+      addWordsCard.classList.remove("add_words_card");
+      RemoveWordsCard.classList.remove("remove_words_card");
+
+      moreWordsCard.classList.toggle("more_card");
     })
   },
 }

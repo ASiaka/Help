@@ -1,12 +1,6 @@
 console.log("Play.js");
 
 const Play = {
-  // handleChooseCurrentVocabulary: function () {
-  //   currentVocabulary = eval(category.value);
-  //   Play.handlePlayWords();
-  //   console.log(currentVocabulary);
-  // },
-
   handleChooseLangToUse: function () {
     Play.en();
     Play.fr();
@@ -32,10 +26,11 @@ const Play = {
   },
 
   handlePlayWords: function () {
-    if (currentVocabulary.length > 3) {
+    if (currentVocabulary.length > 2) {
       listWordsCard.classList.remove("list_words_card");
       addWordsCard.classList.remove("add_words_card");
       RemoveWordsCard.classList.remove("remove_words_card");
+      moreWordsCard.classList.remove("more_card");
   
       let wordIndex = Math.round(Math.random() * (usedLanguage.length - 1));
       randomWord.classList.add("random_word_style");
@@ -69,7 +64,6 @@ const Play = {
     contentRandomWord.append(spanButton);
 
     let spanResponse = document.createElement('span');
-    // spanResponse.textContent = "That's Ok";
     spanResponse.className = "span_response_none";
     contentRandomWord.append(spanResponse);
 
@@ -92,7 +86,9 @@ const Play = {
         }
   },
 
-  handleValidation: function() {
+  handleValidation: function(e) {
+    e.preventDefault();
+    
     if (randomWord.textContent.toLowerCase() === Play.wordFind().en.toLowerCase() && response.value.toLowerCase() === Play.wordFind().fr.toLowerCase()) {
       successWord.classList.add("success");
       failedWord.classList.remove("failed");
