@@ -221,6 +221,21 @@ border: #2E324470 1px solid;
   padding: 7px;
   margin: 0;
 }
+.info_content {
+  /* height: 90%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+.info_title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.info_paragraph {
+  width: 90%;
+}
 
 /*More words*/
 

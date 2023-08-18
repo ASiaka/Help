@@ -6,8 +6,7 @@ let App = {
 
     Add.handlePushItems();
 
-    console.log(currentVocabulary, Play.en(), Play.fr(), Play.enAndFr());
-
+    Play.en(); Play.fr(); Play.enAndFr();
     selectLanguage.addEventListener('change', Play.handleChooseLangToUse);
     
     buttonPlay.addEventListener('click', Play.handlePlayWords);
@@ -51,18 +50,26 @@ let App = {
     aPropos.addEventListener('click', () => {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
+
+      More.handleCurrentContent("a_propos", "A propos", "Veuillez trouver ci-dessous tout à propos de nous.");
     });
     modeDemploi.addEventListener('click', () => {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
+
+      More.handleCurrentContent("mode_d-emploi", "Mode d'emploi", "Veuillez trouver ci-dessous le mode d'emploi.");
     });
     suggestions.addEventListener('click', () => {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
+
+      More.handleCurrentContent("suggestions", "Suggestions", "Veuillez nous faire part de vos suggestions.");
     });
     contact.addEventListener('click', () => {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
+
+      More.handleCurrentContent("contact", "Contact", "Veuillez nous laissé un message.");
     });
     closeInfoCard.addEventListener('click', () => {
       infoCard.classList.remove("info_card");
