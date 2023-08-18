@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Rubik+Mono+One&display=swap');
 body {
   /* background-color: #B0C0D4; */
   background-color: #EFF3F5;
@@ -194,6 +194,27 @@ border: #2E324470 1px solid;
   }
 }
 
+/*Info card*/
+
+.info_card_none {
+  position: fixed;
+  top: 35%;
+  display: none;
+  background-color: white;
+  width: 80%;
+  height: 30%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+}
+.info_card {
+  display: flex;
+  flex-direction: column;
+}
+.info_card_none .close_info_card {
+  align-self: flex-end;
+  margin: 0;
+}
+
 /*More words*/
 
 .more_card_none {
@@ -201,22 +222,23 @@ border: #2E324470 1px solid;
   padding: 15px;
   display: none;
   background-color: white;
-  /* box-shadow: 1px 1px 1px 1px gainsboro; */
+  box-shadow: 1px 1px 1px 1px gainsboro;
   position: fixed;
   bottom: 65px;
   left: 15px;
   z-index: 1;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 .more_card {
   display: block;
 }
 .more {
   padding: 10px;
-  border-bottom: 1px gainsboro solid;
 }
 .more:hover {
   background-color: #EFF3F5;
-  border-bottom: 1px #EFF3F5 solid;
 }
 
 /*Add words*/
@@ -235,6 +257,7 @@ border: #2E324470 1px solid;
   bottom: 65px;
   /* right: 15px; */
   z-index: 1;
+  border-radius: 5px;
 }
 .add_words_card {
   display: flex;
@@ -251,6 +274,45 @@ border: #2E324470 1px solid;
   border: none;
 }
 
+/*Remove words*/
+
+.remove_words_card_none {
+  width: 250px;
+  height: 100px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  color: #2E3244;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 65px;
+  /* right: 15px; */
+  z-index: 1;
+  border-radius: 5px;
+}
+.remove_words_card {
+  display: flex;
+}
+.button_oui {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 20px 10px 0 10px;
+}
+.button_non {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 20px 10px 0 10px;
+}
+
 /*List words*/
 
 .list_words_card_none {
@@ -264,6 +326,7 @@ border: #2E324470 1px solid;
   bottom: 65px;
   /* left: 15px; */
   z-index: 1;
+  border-radius: 5px;
 }
 .list_words_card {
   display: block;
@@ -298,44 +361,6 @@ border: #2E324470 1px solid;
   text-align: center;
 }
 
-/*Remove words*/
-
-.remove_words_card_none {
-  width: 250px;
-  height: 100px;
-  background-color: white;
-  box-shadow: 1px 1px 1px 1px gainsboro;
-  color: #2E3244;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: fixed;
-  bottom: 65px;
-  /* right: 15px; */
-  z-index: 1;
-}
-.remove_words_card {
-  display: flex;
-}
-.button_oui {
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 15px;
-  margin: 20px 10px 0 10px;
-}
-.button_non {
-  background-color: blue;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 15px;
-  margin: 20px 10px 0 10px;
-}
-
 @media (max-width: 450px) {
   .list_words_card_none {
     width: 75%;
@@ -351,7 +376,7 @@ border: #2E324470 1px solid;
 
 .footer_content {
   width: 100%;
-  height: 50px;
+  height: 55px;
   padding: 0 15px;
   box-sizing: border-box;
   box-shadow: 1px 1px 5px 1px gainsboro;
@@ -363,13 +388,21 @@ border: #2E324470 1px solid;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .fa-solid {
   padding: 7px;
-  margin: 0 5px;
+  margin: 0 10px;
   border-radius: 5px;
 }
-.fa-solid:hover {
+
+.icons {
+  display: flex;
+}
+.button_more:hover, .button_play:hover, .button_moins:hover, .button_plus:hover, .button_list:hover {
   color: blue;
+}
+.footer_content p {
+  font-size: 9px;
 }

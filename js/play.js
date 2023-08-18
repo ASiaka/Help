@@ -31,6 +31,7 @@ const Play = {
       addWordsCard.classList.remove("add_words_card");
       RemoveWordsCard.classList.remove("remove_words_card");
       moreWordsCard.classList.remove("more_card");
+      infoCard.classList.remove("info_card");
   
       let wordIndex = Math.round(Math.random() * (usedLanguage.length - 1));
       randomWord.classList.add("random_word_style");

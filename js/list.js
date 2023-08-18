@@ -24,6 +24,7 @@ const List = {
     listWordsCard.classList.toggle("list_words_card");
     RemoveWordsCard.classList.remove("remove_words_card");
     moreWordsCard.classList.remove("more_card");
+    infoCard.classList.remove("info_card");
     
     for (let index = 0; index < arrayItems.length; index++) {
       let backgroundGray = "backgroung_white";

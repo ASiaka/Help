@@ -23,10 +23,17 @@ const moreWordsCard = document.querySelector(".more_card_none");
 const addWordsCard = document.querySelector(".add_words_card_none");
 const RemoveWordsCard = document.querySelector(".remove_words_card_none");
 const listWordsCard = document.querySelector(".list_words_card_none");
+const infoCard = document.querySelector(".info_card_none");
 
 const buttonAdd = document.querySelector(".button_add");
 const buttonOui = document.querySelector(".button_oui");
 const buttonNon = document.querySelector(".button_non");
+
+const aPropos = document.querySelector(".a_propos");
+const modeDemploi = document.querySelector(".mode_d-emploi");
+const suggestions = document.querySelector(".suggestions");
+const contact = document.querySelector(".contact");
+const closeInfoCard = document.querySelector(".close_info_card");
 
 const arrayItems = [];
 let theTwoLanguages = [];

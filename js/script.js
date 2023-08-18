@@ -25,6 +25,7 @@ let App = {
       listWordsCard.classList.remove("list_words_card");
       addWordsCard.classList.remove("add_words_card");
       moreWordsCard.classList.remove("more_card");
+      infoCard.classList.remove("info_card");
 
       RemoveWordsCard.classList.toggle("remove_words_card");
     });
@@ -45,7 +46,27 @@ let App = {
       RemoveWordsCard.classList.remove("remove_words_card");
 
       moreWordsCard.classList.toggle("more_card");
-    })
+    });
+
+    aPropos.addEventListener('click', () => {
+      moreWordsCard.classList.remove("more_card");
+      infoCard.classList.add("info_card");
+    });
+    modeDemploi.addEventListener('click', () => {
+      moreWordsCard.classList.remove("more_card");
+      infoCard.classList.add("info_card");
+    });
+    suggestions.addEventListener('click', () => {
+      moreWordsCard.classList.remove("more_card");
+      infoCard.classList.add("info_card");
+    });
+    contact.addEventListener('click', () => {
+      moreWordsCard.classList.remove("more_card");
+      infoCard.classList.add("info_card");
+    });
+    closeInfoCard.addEventListener('click', () => {
+      infoCard.classList.remove("info_card");
+    });
   },
 }
 
