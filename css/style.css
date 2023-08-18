@@ -33,14 +33,15 @@ body {
 /*Response*/
 
 .main_content {
-  /* height: calc(100vh - 165px);
+  /* height: calc(100vh - 170px);
   padding-top: 115px;
   padding-bottom: 50px; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  font-family: 'Pacifico', cursive;
+  /* font-family: 'Pacifico', cursive; */
+  font-family: 'Montserrat', sans-serif;
 }
 .form_response {
   width: 100%;
@@ -106,8 +107,11 @@ border: #2E324470 1px solid;
   padding: 15px;
   margin-bottom: 25px;
   border-radius: 5px;
-  color: #EFF3F5;
-  background-color: #2E3244;
+  /* color: #EFF3F5;
+  background-color: #2E3244; */
+  color: #2E3244;
+  border: #2E324450 1px solid;
+  font-weight: bold;
   text-align: center;
   box-sizing: border-box;
 }
@@ -144,13 +148,13 @@ border: #2E324470 1px solid;
   justify-content: flex-end;
   align-items: center;
   padding: 0 15px;
-  border: 1px white solid;
+  /* border: 1px white solid; */
   background-color: white;
   color: #EFF3F5;
   border-radius: 3px;
   position: absolute;
   right: -30px;
-  top: 50px;
+  top: 51px;
   cursor: pointer;
 }
 .span_response {
@@ -165,6 +169,8 @@ border: #2E324470 1px solid;
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-weight: bold;
+  color: green;
 }
 
 /*Used language*/
@@ -200,6 +206,7 @@ border: #2E324470 1px solid;
   position: fixed;
   top: 35%;
   display: none;
+  flex-direction: column;
   background-color: white;
   width: 80%;
   height: 30%;
@@ -208,10 +215,10 @@ border: #2E324470 1px solid;
 }
 .info_card {
   display: flex;
-  flex-direction: column;
 }
 .info_card_none .close_info_card {
   align-self: flex-end;
+  padding: 7px;
   margin: 0;
 }
 
@@ -272,12 +279,13 @@ border: #2E324470 1px solid;
   color: #EFF3F5;
   border-radius: 5px;
   border: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*Remove words*/
 
 .remove_words_card_none {
-  width: 250px;
+  width: 285px;
   height: 100px;
   background-color: white;
   box-shadow: 1px 1px 1px 1px gainsboro;
@@ -302,7 +310,8 @@ border: #2E324470 1px solid;
   border: none;
   border-radius: 5px;
   padding: 5px 15px;
-  margin: 20px 10px 0 10px;
+  margin: 15px 10px 0 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 .button_non {
   background-color: blue;
@@ -310,7 +319,8 @@ border: #2E324470 1px solid;
   border: none;
   border-radius: 5px;
   padding: 5px 15px;
-  margin: 20px 10px 0 10px;
+  margin: 15px 10px 0 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*List words*/
@@ -363,12 +373,12 @@ border: #2E324470 1px solid;
 
 @media (max-width: 450px) {
   .list_words_card_none {
-    width: 75%;
+    width: 80%;
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 320px) {
   .remove_words_card_none {
-    width: 85%;
+    width: 210px;
   }
 }
 
@@ -392,7 +402,7 @@ border: #2E324470 1px solid;
 }
 
 .fa-solid {
-  padding: 7px;
+  padding: 0 7px 7px;
   margin: 0 10px;
   border-radius: 5px;
 }
@@ -404,5 +414,5 @@ border: #2E324470 1px solid;
   color: blue;
 }
 .footer_content p {
-  font-size: 9px;
+  font-size: 10px;
 }
