@@ -136,7 +136,8 @@ const Play = {
     const speech = new SpeechSynthesisUtterance(text);
     speech.lang = (usedLanguage === languageOne) ? "en" :
                   (usedLanguage === languageTwo) ? "fr" : 
-                  (usedLanguage === theTwoLanguages) && currentLang();
+                  (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) ? "en" :
+                  (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) && "fr";
     speechSynthesis.speak(speech);
 
     console.log(Play.wordFind());

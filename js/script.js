@@ -53,7 +53,7 @@ let App = {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
 
-      More.handleCurrentContent("a_propos", "A propos", "RevisionHelp est une application qui vous aide à révisez votre vocalaire lorsque vous apprenez une langue.");
+      More.handleCurrentContent("a_propos", "A propos", "RevisionHelp est une application qui vous aide à révisez votre vocabulaire lorsque vous apprenez une langue.");
     });
     modeDemploi.addEventListener('click', () => {
       moreWordsCard.classList.remove("more_card");
