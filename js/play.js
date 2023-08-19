@@ -43,6 +43,8 @@ const Play = {
       eyesButton.classList.add("span_button");
   
       Play.seeTheResponse();
+
+      Play.handleSpeechWord(randomWord);
     } else {
         alert("Vous devez ajouter 3 vocabulaires minimum");
         Add.handleOpenAddWordsCard();
@@ -119,5 +121,25 @@ const Play = {
           failedWord.classList.add("failed");
         }
   },
+
+  handleSpeechWord: function (word) {
+    function currentLang() {
+      if (word.textContent === Play.wordFind().lang1) {
+        return "en"
+      }
+      if (word.textContent === Play.wordFind().lang2) {
+        return "fr"
+      }
+    };
+
+    let text = word.textContent;
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = (usedLanguage === languageOne) ? "en" :
+                  (usedLanguage === languageTwo) ? "fr" : 
+                  currentLang();
+    speechSynthesis.speak(speech);
+
+    console.log(Play.wordFind(), currentLang());
+  }
 
 }

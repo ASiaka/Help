@@ -53,25 +53,25 @@ let App = {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
 
-      More.handleCurrentContent("a_propos", "A propos", "Veuillez trouver ci-dessous tout à propos de nous.");
+      More.handleCurrentContent("a_propos", "A propos", "RevisionHelp est une application qui vous aide à révisez votre vocalaire lorsque vous apprenez une langue.");
     });
     modeDemploi.addEventListener('click', () => {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
 
-      More.handleCurrentContent("mode_d-emploi", "Mode d'emploi", "Veuillez trouver ci-dessous le mode d'emploi.");
+      More.handleCurrentContent("mode_d-emploi", "Mode d'emploi", "[= List] : Liste de vocabulaire [+ Add] : Ajout de vocabulaire [- Delete] : Suppréssion de tout le vocabulaire [> Play] : Propose aléatoirement un mot du vocabulaire et à vous d'écrire sa traduction.");
     });
     suggestions.addEventListener('click', () => {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
 
-      More.handleCurrentContent("suggestions", "Suggestions", "Veuillez nous faire part de vos suggestions.");
+      More.handleCurrentContent("suggestions", "Suggestions", "Vous pouvez nous faire part de vos suggestions via notre site : https://asiakadev.com");
     });
     contact.addEventListener('click', () => {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
 
-      More.handleCurrentContent("contact", "Contact", "Veuillez nous laissé un message.");
+      More.handleCurrentContent("contact", "Contact", "Vous pouvez nous contacter via notre site : https://asiakadev.com");
     });
     closeInfoCard.addEventListener('click', () => {
       infoCard.classList.remove("info_card");

@@ -209,7 +209,7 @@ border: #2E324470 1px solid;
   flex-direction: column;
   background-color: white;
   width: 80%;
-  height: 30%;
+  /* min-height: 30%; */
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px gainsboro;
 }
@@ -234,7 +234,8 @@ border: #2E324470 1px solid;
   margin-bottom: 10px;
 }
 .info_paragraph {
-  width: 90%;
+  width: 85%;
+  margin-bottom: 25px;
 }
 
 /*More words*/
