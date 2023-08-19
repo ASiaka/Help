@@ -124,7 +124,7 @@ const Play = {
 
   handleSpeechWord: function (word) {
     function currentLang() {
-      if (usedLanguage === theTwoLanguages & word.textContent === Play.wordFind().lang1) {
+      if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
         return "en"
       }
       if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
