@@ -123,21 +123,20 @@ const Play = {
   },
 
   handleSpeechWord: function (word) {
-    // function currentLang() {
-    //   if (word.textContent === Play.wordFind().lang1) {
-    //     return "en"
-    //   }
-    //   if (word.textContent === Play.wordFind().lang2) {
-    //     return "fr"
-    //   }
-    // };
+    function currentLang() {
+      if (word.textContent === Play.wordFind().lang1) {
+        return "en"
+      }
+      if (word.textContent === Play.wordFind().lang2) {
+        return "fr"
+      }
+    };
 
     let text = word.textContent;
     const speech = new SpeechSynthesisUtterance(text);
     speech.lang = (usedLanguage === languageOne) ? "en" :
                   (usedLanguage === languageTwo) ? "fr" : 
-                  (word.textContent === Play.wordFind().lang1) ? "en" :
-                  (word.textContent === Play.wordFind().lang2) && "fr";
+                  (usedLanguage === theTwoLanguages) && currentLang();
     speechSynthesis.speak(speech);
 
     console.log(Play.wordFind());
