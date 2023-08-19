@@ -6,7 +6,9 @@ let App = {
 
     Add.handlePushItems();
 
-    Play.en(); Play.fr(); Play.enAndFr();
+    response.disabled = true;
+
+    Play.lang1(); Play.lang2(); Play.lang1and2();
     selectLanguage.addEventListener('change', Play.handleChooseLangToUse);
     
     buttonPlay.addEventListener('click', Play.handlePlayWords);
@@ -29,7 +31,7 @@ let App = {
       RemoveWordsCard.classList.toggle("remove_words_card");
     });
     buttonOui.addEventListener('click', () => {
-      console.log('suppWord Ok');
+      console.log('suppWords Ok');
 
       Remove.handleClearItems();
       // Add.handlePushItems();

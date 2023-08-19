@@ -2,26 +2,25 @@ console.log("Play.js");
 
 const Play = {
   handleChooseLangToUse: function () {
-    Play.en();
-    Play.fr();
-    Play.wordFind();
+    Play.lang1();
+    Play.lang2();
+    Play.lang1and2();
     usedLanguage = eval(selectLanguage.value);
     Play.handlePlayWords();
-    console.log(usedLanguage);
   },
   
-  en: function () {
-    currentVocabulary.map(i => languageOne.push(i.en.toLowerCase()));
+  lang1: function () {
+    currentVocabulary.map(i => languageOne.push(i.lang1.toLowerCase()));
     return languageOne
   },
 
-  fr: function () {
-    currentVocabulary.map(i => languageTwo.push(i.fr.toLowerCase()));
+  lang2: function () {
+    currentVocabulary.map(i => languageTwo.push(i.lang2.toLowerCase()));
     return languageTwo
   },
 
-  enAndFr: function () {
-    currentVocabulary.map(i => theTwoLanguages.push(i.en.toLowerCase(), i.fr.toLowerCase()));
+  lang1and2: function () {
+    currentVocabulary.map(i => theTwoLanguages.push(i.lang1.toLowerCase(), i.lang2.toLowerCase()));
     return theTwoLanguages
   },
 
@@ -36,6 +35,7 @@ const Play = {
       let wordIndex = Math.round(Math.random() * (usedLanguage.length - 1));
       randomWord.classList.add("random_word_style");
       randomWord.textContent = usedLanguage[wordIndex];
+      response.disabled = false;
       response.value = "";
       response.focus();
   
@@ -51,10 +51,10 @@ const Play = {
 
   wordFind: function() {
     const find = currentVocabulary.find(i => {
-      return (i.fr.toLowerCase() === randomWord.textContent.toLowerCase() ||
-              i.en.toLowerCase() === randomWord.textContent.toLowerCase())
+      return (i.lang2.toLowerCase() === randomWord.textContent.toLowerCase() ||
+              i.lang1.toLowerCase() === randomWord.textContent.toLowerCase())
     });
-    console.log(find);
+    
     return find
   },
 
@@ -74,14 +74,12 @@ const Play = {
   },
 
   seeTheResponse: function() {
-
-    console.log(Play.wordFind());
     let spanResponse = document.querySelector('.span_response_none');
 
-    if (randomWord.textContent.toLowerCase() === Play.wordFind().en.toLowerCase()) {
-      spanResponse.textContent = Play.wordFind().fr;
-    } else if (randomWord.textContent.toLowerCase() === Play.wordFind().fr.toLowerCase()) {
-        spanResponse.textContent = Play.wordFind().en;
+    if (randomWord.textContent.toLowerCase() === Play.wordFind().lang1.toLowerCase()) {
+      spanResponse.textContent = Play.wordFind().lang2;
+    } else if (randomWord.textContent.toLowerCase() === Play.wordFind().lang2.toLowerCase()) {
+        spanResponse.textContent = Play.wordFind().lang1;
       } else {
           spanResponse.textContent = "";
         }
@@ -90,11 +88,11 @@ const Play = {
   handleValidation: function(e) {
     e.preventDefault();
     
-    if (randomWord.textContent.toLowerCase() === Play.wordFind().en.toLowerCase() && response.value.toLowerCase() === Play.wordFind().fr.toLowerCase()) {
+    if (randomWord.textContent.toLowerCase() === Play.wordFind().lang1.toLowerCase() && response.value.toLowerCase() === Play.wordFind().lang2.toLowerCase()) {
       successWord.classList.add("success");
       failedWord.classList.remove("failed");
 
-      goodResponse.textContent = Play.wordFind().fr;
+      goodResponse.textContent = Play.wordFind().lang2;
       response.value = "";
 
       setTimeout(() => {
@@ -103,11 +101,11 @@ const Play = {
         goodResponse.textContent = "";
       }, 1500);
 
-    } else if (randomWord.textContent.toLowerCase() === Play.wordFind().fr.toLowerCase() && response.value.toLowerCase() === Play.wordFind().en.toLowerCase()) {
+    } else if (randomWord.textContent.toLowerCase() === Play.wordFind().lang2.toLowerCase() && response.value.toLowerCase() === Play.wordFind().lang1.toLowerCase()) {
         successWord.classList.add("success");
         failedWord.classList.remove("failed");
 
-        goodResponse.textContent = Play.wordFind().en;
+        goodResponse.textContent = Play.wordFind().lang1;
         response.value = "";
 
         setTimeout(() => {

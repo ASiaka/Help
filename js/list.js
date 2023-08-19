@@ -1,16 +1,16 @@
 console.log("List.js");
 
 const List = {
-  wordsList: function (en, fr, backgroundGray) {
+  wordsList: function (lang1, lang2, backgroundGray) {
     let words = document.querySelector(".words");
     let word = document.createElement('div');
     word.classList.add("word", backgroundGray);
-    let listEn = document.createElement('p');
-    let listFr = document.createElement('p');
-    listEn.textContent = en;
-    listFr.textContent = fr;
+    let listLang1 = document.createElement('p');
+    let listLang2 = document.createElement('p');
+    listLang1.textContent = lang1;
+    listLang2.textContent = lang2;
 
-    word.append(listEn, listFr);
+    word.append(listLang1, listLang2);
     words.append(word);
   },
 
@@ -31,7 +31,7 @@ const List = {
       if (index % 2) {
         backgroundGray = "background_gray"
       }
-      List.wordsList(arrayItems[index].en, arrayItems[index].fr, backgroundGray);
+      List.wordsList(arrayItems[index].lang1, arrayItems[index].lang2, backgroundGray);
     }
   }
 }

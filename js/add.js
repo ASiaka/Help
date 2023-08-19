@@ -23,15 +23,13 @@ const Add = {
     moreWordsCard.classList.remove("more_card");
     infoCard.classList.remove("info_card");
 
-    let addWordEn = document.querySelector("#add_word_en");
-    let addWordFr = document.querySelector("#add_word_fr");
+    let addWordLang1 = document.querySelector("#add_word_lang1");
+    let addWordLang2 = document.querySelector("#add_word_lang2");
 
-    if (addWordEn.value.trim() === "") {
-      console.log("en empty");
-      addWordEn.focus()
-    } else if (addWordFr.value.trim() === "") {
-        console.log("fr empty");
-        addWordFr.focus()
+    if (addWordLang1.value.trim() === "") {
+      addWordLang1.focus()
+    } else if (addWordLang2.value.trim() === "") {
+        addWordLang2.focus()
       }
   },
 
@@ -39,30 +37,26 @@ const Add = {
     e.preventDefault();
     console.log("submit Ok");
 
-    let addWordEn = document.querySelector("#add_word_en");
-    let addWordFr = document.querySelector("#add_word_fr");
+    let addWordLang1 = document.querySelector("#add_word_lang1");
+    let addWordLang2 = document.querySelector("#add_word_lang2");
 
-    if (addWordEn.value.trim() !== "" && addWordFr.value.trim() !== "") {
-      console.log("is not empty");
-      const objectItems = {en: addWordEn.value, fr: addWordFr.value, key: localStorage.length+1}
+    if (addWordLang1.value.trim() !== "" && addWordLang2.value.trim() !== "") {
+      const objectItems = {lang1: addWordLang1.value, lang2: addWordLang2.value, key: localStorage.length+1}
       Add.handleSetItem(localStorage.length+1, objectItems);
-      addWordEn.value = "";
-      addWordFr.value = "";
-      addWordEn.focus();
+      addWordLang1.value = "";
+      addWordLang2.value = "";
+      addWordLang1.focus();
 
       Add.handlePushItems();
     } else {
-      if (addWordEn.value.trim() === "") {
-        console.log("en empty");
-        addWordEn.focus()
+      if (addWordLang1.value.trim() === "") {
+        addWordLang1.focus()
       }
-      if (addWordFr.value.trim() === "") {
-        console.log("fr empty");
-        addWordFr.focus()
+      if (addWordLang2.value.trim() === "") {
+        addWordLang2.focus()
       }
-      if (addWordEn.value.trim() === "" & addWordFr.value.trim() === "") {
-        console.log("en & fr empty");
-        addWordEn.focus()
+      if (addWordLang1.value.trim() === "" & addWordLang2.value.trim() === "") {
+        addWordLang1.focus()
       }
     }
   }
