@@ -3,6 +3,7 @@ console.log("Script.js");
 let App = {
   init: function() {
     Play.seeTheResponseButton();
+    Play.onMute();
 
     Add.handlePushItems();
 

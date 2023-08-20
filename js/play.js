@@ -41,6 +41,9 @@ const Play = {
   
       const eyesButton = document.querySelector(".span_button_none");
       eyesButton.classList.add("span_button");
+
+      const onMute = document.querySelector(".on_mute_none");
+      onMute.classList.add("on_mute");
   
       Play.seeTheResponse();
 
@@ -58,6 +61,27 @@ const Play = {
     });
     
     return find
+  },
+
+  onMute: function () {
+    let onMute = document.createElement('i');
+    onMute.className = "fa-solid fa-volume-high on_mute_none";
+    contentRandomWord.append(onMute);
+
+    console.log(onMute.className);
+
+    onMute.addEventListener('click', () => {
+      if (onMute.className === "fa-solid fa-volume-high on_mute_none on_mute") {
+        onMute.classList.replace("fa-volume-high", "fa-volume-xmark");
+        console.log("mute");
+        return
+      }
+      if (onMute.className === "fa-solid fa-volume-xmark on_mute_none on_mute") {
+        onMute.classList.replace("fa-volume-xmark", "fa-volume-high");
+        console.log("sound");
+        return
+      }
+    })
   },
 
   seeTheResponseButton: function () {
@@ -124,28 +148,31 @@ const Play = {
 
   handleSpeechWord: function (word) {
     function currentLang() {
-      if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
+      if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) || (usedLanguage === languageOne)) {
         return "en"
       }
-      if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
+      if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) || (usedLanguage === languageTwo)) {
         return "fr"
       }
-      if (usedLanguage === languageOne) {
-        return "en"
+    };
+
+    function mute() {
+      const onMute = document.querySelector(".on_mute");
+      if (onMute.className === "fa-solid fa-volume-high on_mute_none on_mute") {
+        speechSynthesis.speak(speech);
+        return
       }
-      if (usedLanguage === languageTwo) {
-        return "fr"
+      if (onMute.className === "fa-solid fa-volume-xmark on_mute_none on_mute") {
+        speechSynthesis.cancel(speech);
+        return
       }
     };
 
     let text = word.textContent;
     const speech = new SpeechSynthesisUtterance(text);
     speech.lang = currentLang();
-    // speech.lang = (usedLanguage === languageOne) ? "en" :
-    //               (usedLanguage === languageTwo) ? "fr" : 
-    //               (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) ? "en" :
-    //               (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) && "fr";
-    speechSynthesis.speak(speech);
+    mute();
+
 
     console.log(Play.wordFind(), currentLang());
   }
