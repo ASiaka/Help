@@ -8,7 +8,8 @@ body {
 
 .header_content {
   width: 100%;
-  height: 115px;
+  height: 100px;
+  /* height: 115px; */
   /* position: fixed;
   top: 0; */
   color: #EFF3F5;
@@ -20,8 +21,8 @@ body {
 }
 
 .logo_revision_help {
-  width: 120px;
-  margin-bottom: 5px;
+  width: 150px;
+  /* margin-bottom: 5px; */
 }
 
 /* .header_title {
@@ -33,7 +34,13 @@ body {
   /* font-family: 'Pacifico', cursive; */
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 8px;
+  text-align: center;
+  background-color: white;
+  color: #2E3244;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 /*MAIN*/
@@ -55,7 +62,8 @@ body {
   width: 100%;
   box-sizing: border-box;
   padding: 35px;
-  border-bottom: #2E324450 1px solid;
+  border-top: #2E324425 1px solid;
+  border-bottom: #2E324425 1px solid;
   display: flex;
   justify-content: center;
   align-items: center;
