@@ -251,6 +251,7 @@ border: #2E324470 1px solid;
   flex-direction: column;
   background-color: white;
   width: 80%;
+  max-width: 500px;
   /* min-height: 30%; */
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px gainsboro;
@@ -270,6 +271,7 @@ border: #2E324470 1px solid;
   justify-content: start;
   align-items: center;
   text-align: center;
+  margin-bottom: 25px;  
 }
 .info_title {
   font-weight: bold;
@@ -277,7 +279,13 @@ border: #2E324470 1px solid;
 }
 .info_paragraph {
   width: 85%;
-  margin-bottom: 25px;
+}
+.link_paragraph {
+  /* text-decoration: none; */
+  color: #2E3244;
+}
+.link_paragraph:hover {
+  color: #2E324490;
 }
 
 /*More words*/
@@ -423,6 +431,7 @@ border: #2E324470 1px solid;
   color: #2E3244;
   display: flex;
   justify-content: space-evenly;
+  font-size: 13px;
 }
 .word p {
   width: 50%;

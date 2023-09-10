@@ -33,5 +33,7 @@ const List = {
       }
       List.wordsList(arrayItems[index].lang1, arrayItems[index].lang2, backgroundGray);
     }
+
+    Remove.handleRemoveWord();
   }
 }

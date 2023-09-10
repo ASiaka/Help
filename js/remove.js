@@ -10,9 +10,15 @@ const Remove = {
     }
   },
 
-  // handleRemoveWord: function (e) {  
-  //   const currentWord = document.querySelector(".words");
+  handleRemoveWord: function (e) {  
+    const nodeWord = document.querySelector(".words");
+    const currentWord = document.querySelector(".word");
 
-  //   console.log(localStorage.key(1), localStorage.getItem(2), currentWord);
-  // },
+    nodeWord.addEventListener('click', (e) => {
+      console.log(e.target);
+    });
+
+    // console.log(localStorage.key(1), localStorage.getItem(2));
+    // console.log(nodeWord, currentWord);
+  },
 }

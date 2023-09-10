@@ -173,8 +173,7 @@ const Play = {
     speech.lang = currentLang();
     mute();
 
-
-    console.log(Play.wordFind(), currentLang());
+    // console.log(Play.wordFind(), currentLang());
   }
 
 }
