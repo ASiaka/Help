@@ -17,7 +17,7 @@ const List = {
   handleWordsList: function () {
     let words = document.querySelector(".words");
     while (words.firstChild) {
-      words.removeChild(words.firstChild);  
+      words.removeChild(words.firstChild);
     }
 
     addWordsCard.classList.remove("add_words_card");

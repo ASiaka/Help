@@ -35,7 +35,7 @@ let App = {
       console.log('suppWords Ok');
 
       Remove.handleClearItems();
-      // Add.handlePushItems();
+      Add.handlePushItems();
       RemoveWordsCard.classList.remove("remove_words_card");
     });
     buttonNon.addEventListener('click', () => {

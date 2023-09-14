@@ -5,9 +5,10 @@ const Remove = {
     localStorage.removeItem(item);
   },
   handleClearItems: function() {
-    for( let i = 0; i < localStorage.length; i++){
-      localStorage.clear(i);
-    }
+    localStorage.clear();
+    // for( let i = 0; i < localStorage.length; i++){
+    //   localStorage.clear(i);
+    // }
   },
 
   handleRemoveWord: function (e) {  

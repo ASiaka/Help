@@ -8,12 +8,14 @@ const Add = {
   handlePushItems: function() {
     for( let i = 0; i < arrayItems.length; i++){
       arrayItems.shift();
-      console.log(i, arrayItems.length, localStorage.length);
+      console.log(arrayItems, arrayItems.length);
     }
     for( let i = 0; i < localStorage.length; i++){
       arrayItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
-      // console.log(arrayItems.length, localStorage.length);
+      console.log(arrayItems, arrayItems.length);
     }
+
+    console.log(arrayItems, arrayItems.length);
   },
 
   handleOpenAddWordsCard: function () {
