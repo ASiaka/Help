@@ -31,6 +31,7 @@ const Play = {
       RemoveWordsCard.classList.remove("remove_words_card");
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.remove("info_card");
+      RemoveVocabularyCard.classList.remove("remove_vocabulary_card");
   
       let wordIndex = Math.round(Math.random() * (usedLanguage.length - 1));
       randomWord.classList.add("random_word_style");
@@ -68,7 +69,7 @@ const Play = {
     onMute.className = "fa-solid fa-volume-high on_mute_none";
     contentRandomWord.append(onMute);
 
-    console.log(onMute.className);
+    // console.log(onMute.className);
 
     onMute.addEventListener('click', () => {
       if (onMute.className === "fa-solid fa-volume-high on_mute_none on_mute") {

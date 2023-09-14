@@ -8,14 +8,14 @@ const Add = {
   handlePushItems: function() {
     for( let i = 0; i < arrayItems.length; i++){
       arrayItems.shift();
-      console.log(arrayItems, arrayItems.length);
+      // console.log(arrayItems, arrayItems.length);
     }
     for( let i = 0; i < localStorage.length; i++){
       arrayItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
-      console.log(arrayItems, arrayItems.length);
+      // console.log(arrayItems, arrayItems.length);
     }
 
-    console.log(arrayItems, arrayItems.length);
+    // console.log(arrayItems, arrayItems.length);
   },
 
   handleOpenAddWordsCard: function () {
@@ -24,6 +24,7 @@ const Add = {
     RemoveWordsCard.classList.remove("remove_words_card");
     moreWordsCard.classList.remove("more_card");
     infoCard.classList.remove("info_card");
+    RemoveVocabularyCard.classList.remove("remove_vocabulary_card");
 
     let addWordLang1 = document.querySelector("#add_word_lang1");
     let addWordLang2 = document.querySelector("#add_word_lang2");
@@ -41,6 +42,24 @@ const Add = {
 
     let addWordLang1 = document.querySelector("#add_word_lang1");
     let addWordLang2 = document.querySelector("#add_word_lang2");
+
+    // function keyword() {
+    //   let maxKey = [];
+    //   let newKey;
+    //   for( let i = 0; i < localStorage.length; i++){
+    //     console.log(localStorage.key(i), localStorage.length+1);
+    //     newKey = localStorage.length+1
+    //     if (localStorage.key(i) === localStorage.length+1) {
+    //       maxKey.push(localStorage.key(i))
+    //       newKey = Math.max(...maxKey);
+    //     }
+    //   }
+    //   console.log(maxKey, Math.max(...maxKey));
+
+    //   return newKey;
+    // }
+    // keyword();
+    // console.log(keyword());
 
     if (addWordLang1.value.trim() !== "" && addWordLang2.value.trim() !== "") {
       const objectItems = {lang1: addWordLang1.value, lang2: addWordLang2.value, key: localStorage.length+1}

@@ -6,6 +6,7 @@ let App = {
     Play.onMute();
 
     Add.handlePushItems();
+    // Remove.handleRemoveWord();
 
     response.disabled = true;
 
@@ -28,9 +29,21 @@ let App = {
       addWordsCard.classList.remove("add_words_card");
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.remove("info_card");
+      RemoveWordsCard.classList.remove("remove_words_card");
 
-      RemoveWordsCard.classList.toggle("remove_words_card");
+      RemoveVocabularyCard.classList.toggle("remove_vocabulary_card");
     });
+    buttonTout.addEventListener('click', () => {
+      RemoveVocabularyCard.classList.remove("remove_vocabulary_card");
+
+      RemoveWordsCard.classList.add("remove_words_card");
+    });
+    buttonUn.addEventListener('click', () => {
+      RemoveVocabularyCard.classList.remove("remove_vocabulary_card");
+      List.handleWordsList();
+      Remove.handleRemoveWord();
+    });
+    
     buttonOui.addEventListener('click', () => {
       console.log('suppWords Ok');
 
@@ -46,6 +59,7 @@ let App = {
       listWordsCard.classList.remove("list_words_card");
       addWordsCard.classList.remove("add_words_card");
       RemoveWordsCard.classList.remove("remove_words_card");
+      RemoveVocabularyCard.classList.remove("remove_vocabulary_card");
 
       moreWordsCard.classList.toggle("more_card");
     });

@@ -21,13 +21,20 @@ const buttonList = document.querySelector(".button_list");
 
 const moreWordsCard = document.querySelector(".more_card_none");
 const addWordsCard = document.querySelector(".add_words_card_none");
+const RemoveVocabularyCard = document.querySelector(".remove_vocabulary_card_none");
 const RemoveWordsCard = document.querySelector(".remove_words_card_none");
+const RemoveWordContent = document.querySelector(".remove_word_content_none");
+const RemoveWordCard = document.querySelector(".remove_word_card_none");
 const listWordsCard = document.querySelector(".list_words_card_none");
 const infoCard = document.querySelector(".info_card_none");
 
 const buttonAdd = document.querySelector(".button_add");
+const buttonTout = document.querySelector(".button_tout");
+const buttonUn = document.querySelector(".button_un");
 const buttonOui = document.querySelector(".button_oui");
 const buttonNon = document.querySelector(".button_non");
+const buttonWordOui = document.querySelector(".button_word_oui");
+const buttonWordNon = document.querySelector(".button_word_non");
 
 const aPropos = document.querySelector(".a_propos");
 const modeDemploi = document.querySelector(".mode_d-emploi");

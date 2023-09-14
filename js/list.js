@@ -1,10 +1,11 @@
 console.log("List.js");
 
 const List = {
-  wordsList: function (lang1, lang2, backgroundGray) {
+  wordsList: function (lang1, lang2, key, backgroundGray) {
     let words = document.querySelector(".words");
     let word = document.createElement('div');
     word.classList.add("word", backgroundGray);
+    word.id = key;
     let listLang1 = document.createElement('p');
     let listLang2 = document.createElement('p');
     listLang1.textContent = lang1;
@@ -25,15 +26,16 @@ const List = {
     RemoveWordsCard.classList.remove("remove_words_card");
     moreWordsCard.classList.remove("more_card");
     infoCard.classList.remove("info_card");
+    RemoveVocabularyCard.classList.remove("remove_vocabulary_card");
     
     for (let index = 0; index < arrayItems.length; index++) {
       let backgroundGray = "backgroung_white";
       if (index % 2) {
         backgroundGray = "background_gray"
       }
-      List.wordsList(arrayItems[index].lang1, arrayItems[index].lang2, backgroundGray);
+      List.wordsList(arrayItems[index].lang1, arrayItems[index].lang2, arrayItems[index].key, backgroundGray);
     }
 
-    Remove.handleRemoveWord();
+    // Remove.handleRemoveWord();
   }
 }

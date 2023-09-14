@@ -350,9 +350,9 @@ border: #2E324470 1px solid;
 
 /*Remove words*/
 
-.remove_words_card_none {
+.remove_words_card_none, .remove_vocabulary_card_none {
   width: 285px;
-  height: 100px;
+  height: 150px;
   background-color: white;
   box-shadow: 1px 1px 1px 1px gainsboro;
   color: #2E3244;
@@ -367,7 +367,7 @@ border: #2E324470 1px solid;
   z-index: 1;
   border-radius: 5px;
 }
-.remove_words_card {
+.remove_words_card, .remove_vocabulary_card {
   display: flex;
 }
 .button_oui {
@@ -386,6 +386,24 @@ border: #2E324470 1px solid;
   border-radius: 5px;
   padding: 5px 15px;
   margin: 15px 10px 0 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+.button_tout {
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 10px 10px 0 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+.button_un {
+  background-color: gainsboro;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 10px 10px 0 10px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -437,14 +455,64 @@ border: #2E324470 1px solid;
   width: 50%;
   text-align: center;
 }
+.remove_word_content_none {
+  width: calc(350px - 30px);
+  height: 60%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #2E324403;
+  position: fixed;
+  bottom: 65px;
+  right: initial;
+  z-index: 1;
+}
+.remove_word_card {
+  width: 285px;
+  height: 100px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  color: #2E3244;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+}
+.remove_word_content {
+  display: flex;
+}
+.button_word_oui {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 15px 10px 0 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+.button_word_non {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 15px 10px 0 10px;
+  font-family: 'Montserrat', sans-serif;
+}
 
 @media (max-width: 450px) {
   .list_words_card_none {
     width: 80%;
   }
+  .remove_word_content {
+    width: calc(80% - 30px);
+  }
 }
 @media (max-width: 320px) {
-  .remove_words_card_none {
+  .remove_words_card_none, .remove_vocabulary_card_none, .remove_word_card {
     width: 210px;
   }
 }

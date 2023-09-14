@@ -11,15 +11,29 @@ const Remove = {
     // }
   },
 
-  handleRemoveWord: function (e) {  
-    const nodeWord = document.querySelector(".words");
-    const currentWord = document.querySelector(".word");
+  handleRemoveWord: function (e) {
+    // const nodeWord = document.querySelector(".words");
+    const currentWord = document.querySelectorAll(".word");
 
-    nodeWord.addEventListener('click', (e) => {
-      console.log(e.target);
-    });
+    currentWord.forEach((index) => {
+      let keyWord;
+      index.addEventListener('click', (e) => {
+        console.log(e.currentTarget.id, index.id);
 
-    // console.log(localStorage.key(1), localStorage.getItem(2));
-    // console.log(nodeWord, currentWord);
+        keyWord = e.currentTarget.id
+
+        RemoveWordContent.classList.add("remove_word_content");
+
+        buttonWordOui.addEventListener('click', () => {
+          Remove.handleRemoveItem(keyWord);
+          // List.handleWordsList
+          RemoveWordContent.classList.remove("remove_word_content");
+        });
+
+        buttonWordNon.addEventListener('click', () => {
+          RemoveWordContent.classList.remove("remove_word_content");
+        });
+      });
+    })
   },
 }
