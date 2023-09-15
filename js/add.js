@@ -42,28 +42,32 @@ const Add = {
 
     let addWordLang1 = document.querySelector("#add_word_lang1");
     let addWordLang2 = document.querySelector("#add_word_lang2");
+    
+    let maxKey = [];
+    let newKey = localStorage.length+1;
+    
+    function keyword() {
+      // maxKey = [];
+      for( let i = 0; i < localStorage.length; i++){
+        maxKey.push(localStorage.key(i))
+        // console.log(localStorage.key(i), newKey, maxKey, Math.max(...maxKey));
+      }
 
-    // function keyword() {
-    //   let maxKey = [];
-    //   let newKey;
-    //   for( let i = 0; i < localStorage.length; i++){
-    //     console.log(localStorage.key(i), localStorage.length+1);
-    //     newKey = localStorage.length+1
-    //     if (localStorage.key(i) === localStorage.length+1) {
-    //       maxKey.push(localStorage.key(i))
-    //       newKey = Math.max(...maxKey);
-    //     }
-    //   }
-    //   console.log(maxKey, Math.max(...maxKey));
+      console.log(newKey, maxKey);
 
-    //   return newKey;
-    // }
-    // keyword();
-    // console.log(keyword());
+      for (let i = 0; i < maxKey.length; i++) {
+        if (maxKey[i] == newKey) {
+          newKey = Math.max(...maxKey)+1;
+        }        
+      }
+
+      return newKey;
+    }
+    console.log(keyword());
 
     if (addWordLang1.value.trim() !== "" && addWordLang2.value.trim() !== "") {
-      const objectItems = {lang1: addWordLang1.value, lang2: addWordLang2.value, key: localStorage.length+1}
-      Add.handleSetItem(localStorage.length+1, objectItems);
+      const objectItems = {lang1: addWordLang1.value, lang2: addWordLang2.value, key: keyword()}
+      Add.handleSetItem(keyword(), objectItems);
       addWordLang1.value = "";
       addWordLang2.value = "";
       addWordLang1.focus();
