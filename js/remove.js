@@ -6,9 +6,6 @@ const Remove = {
   },
   handleClearItems: function() {
     localStorage.clear();
-    // for( let i = 0; i < localStorage.length; i++){
-    //   localStorage.clear(i);
-    // }
   },
 
   handleRemoveWord: function (e) {
@@ -26,7 +23,16 @@ const Remove = {
 
         buttonWordOui.addEventListener('click', () => {
           Remove.handleRemoveItem(keyWord);
-          // List.handleWordsList
+
+          console.log(localStorage.length, arrayItems.length);
+
+          // for( let i = 0; i < arrayItems.length; i++){
+          //   arrayItems.shift();
+          //   console.log(arrayItems, arrayItems.length);
+          // }
+
+          console.log(arrayItems, arrayItems.length);
+
           RemoveWordContent.classList.remove("remove_word_content");
         });
 

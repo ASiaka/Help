@@ -6,16 +6,18 @@ const Add = {
   },
 
   handlePushItems: function() {
-    for( let i = 0; i < arrayItems.length; i++){
+    console.log(arrayItems, arrayItems.length);
+
+    for( let i = 0; i < localStorage.length; i++){
       arrayItems.shift();
-      // console.log(arrayItems, arrayItems.length);
+      console.log(arrayItems, arrayItems.length);
     }
     for( let i = 0; i < localStorage.length; i++){
       arrayItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
-      // console.log(arrayItems, arrayItems.length);
+      console.log(arrayItems, arrayItems.length);
     }
 
-    // console.log(arrayItems, arrayItems.length);
+    console.log(arrayItems, arrayItems.length);
   },
 
   handleOpenAddWordsCard: function () {
@@ -53,7 +55,7 @@ const Add = {
         // console.log(localStorage.key(i), newKey, maxKey, Math.max(...maxKey));
       }
 
-      console.log(newKey, maxKey);
+      // console.log(newKey, maxKey);
 
       for (let i = 0; i < maxKey.length; i++) {
         if (maxKey[i] == newKey) {
@@ -63,7 +65,7 @@ const Add = {
 
       return newKey;
     }
-    console.log(keyword());
+    // console.log(keyword());
 
     if (addWordLang1.value.trim() !== "" && addWordLang2.value.trim() !== "") {
       const objectItems = {lang1: addWordLang1.value, lang2: addWordLang2.value, key: keyword()}
