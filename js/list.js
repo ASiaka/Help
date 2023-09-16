@@ -35,7 +35,5 @@ const List = {
       }
       List.wordsList(arrayItems[index].lang1, arrayItems[index].lang2, arrayItems[index].key, backgroundGray);
     }
-
-    // Remove.handleRemoveWord();
   }
 }

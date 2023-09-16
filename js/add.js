@@ -18,6 +18,8 @@ const Add = {
     }
 
     console.log(arrayItems, arrayItems.length);
+
+    Play.lang1(); Play.lang2(); Play.lang1and2();
   },
 
   handleOpenAddWordsCard: function () {

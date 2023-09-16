@@ -6,7 +6,6 @@ let App = {
     Play.onMute();
 
     Add.handlePushItems();
-    // Remove.handleRemoveWord();
 
     response.disabled = true;
 
@@ -48,6 +47,9 @@ let App = {
       console.log('suppWords Ok');
 
       Remove.handleClearItems();
+
+      Remove.handleClearWords();
+      
       Add.handlePushItems();
       RemoveWordsCard.classList.remove("remove_words_card");
     });

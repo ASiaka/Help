@@ -150,10 +150,10 @@ const Play = {
   handleSpeechWord: function (word) {
     function currentLang() {
       if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) || (usedLanguage === languageOne)) {
-        return "en"
+        return "en-US"
       }
       if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) || (usedLanguage === languageTwo)) {
-        return "fr"
+        return "fr-FR"
       }
     };
 
@@ -172,6 +172,7 @@ const Play = {
     let text = word.textContent;
     const speech = new SpeechSynthesisUtterance(text);
     speech.lang = currentLang();
+    speechSynthesis.cancel(speech);
     mute();
 
     // console.log(Play.wordFind(), currentLang());
