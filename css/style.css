@@ -480,6 +480,10 @@ border: #2E324470 1px solid;
   align-items: center;
   text-align: center;
   border-radius: 5px;
+  padding: 10px;
+}
+.word_to_delete {
+  color: red;
 }
 .remove_word_content {
   display: flex;
@@ -527,7 +531,7 @@ border: #2E324470 1px solid;
   box-shadow: 1px 1px 5px 1px gainsboro;
   position: fixed;
   bottom: 0;
-  color: gainsboro;
+  color: #2E3244;
   background-color: white;
   display: flex;
   justify-content: space-between;

@@ -41,6 +41,8 @@ let App = {
       RemoveVocabularyCard.classList.remove("remove_vocabulary_card");
       List.handleWordsList();
       Remove.handleRemoveWord();
+      
+      listWordsCard.style.border = "red solid 1px";
     });
     
     buttonOui.addEventListener('click', () => {

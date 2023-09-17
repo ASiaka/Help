@@ -10,17 +10,28 @@ const Remove = {
 
   handleClearWords: function () {
     console.log(arrayItems, arrayItems.length);
+
+    // Remove.handleClearItems();
     arrayItems.splice(0);
 
-    // console.log(arrayItems, arrayItems.length);
-    // let words = document.querySelector(".words");
-    // while (words.firstChild) {
-    //   words.removeChild(words.firstChild);
-    // }
+    selectLanguage.value = "theTwoLanguages";
+
+    successWord.classList.remove("success");
+    failedWord.classList.remove("failed");
+
+    randomWord.classList.remove("random_word_style");
+    randomWord.textContent = "";
+    response.value = "";
+    response.disabled = true;
+
+    const eyesButton = document.querySelector(".span_button_none");
+    eyesButton.classList.remove("span_button");
+
+    const onMute = document.querySelector(".on_mute_none");
+    onMute.classList.remove("on_mute");
   },
 
   handleRemoveWord: function () {
-    // const nodeWord = document.querySelector(".words");
     const currentWord = document.querySelectorAll(".word");
 
     currentWord.forEach((index) => {
@@ -31,6 +42,14 @@ const Remove = {
         keyWord = e.currentTarget.id;
 
         RemoveWordContent.classList.add("remove_word_content");
+
+        let wordDeleted = arrayItems.find((x) => {
+          console.log(x.key, keyWord);
+          return x.key === Number(keyWord);
+        });
+
+        const wordToDelete = document.querySelector(".word_to_delete");
+        wordToDelete.textContent = wordDeleted.lang1 + " / " + wordDeleted.lang2;
 
         buttonWordOui.addEventListener('click', () => {
           Remove.handleRemoveItem(keyWord);
@@ -64,6 +83,8 @@ const Remove = {
           
           // Play.lang1(); Play.lang2(); Play.lang1and2();
           RemoveWordContent.classList.remove("remove_word_content");
+
+          Remove.handleRemoveWord();
         });
 
         buttonWordNon.addEventListener('click', () => {
