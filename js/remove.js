@@ -79,9 +79,12 @@ const Remove = {
             }
           }
           
-          console.log(arrayItems, arrayItems.length);
+          console.log(arrayItems, currentVocabulary, usedLanguage);
           
-          // Play.lang1(); Play.lang2(); Play.lang1and2();
+          usedLanguage.splice(0);
+          Play.lang1(); Play.lang2(); Play.lang1and2();
+          // Play.handleChooseLangToUse();
+
           RemoveWordContent.classList.remove("remove_word_content");
 
           Remove.handleRemoveWord();

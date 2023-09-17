@@ -2,29 +2,38 @@ console.log("Play.js");
 
 const Play = {
   handleChooseLangToUse: function () {
-    Play.lang1();
-    Play.lang2();
-    Play.lang1and2();
+    // Play.lang1();
+    // Play.lang2();
+    // Play.lang1and2();
     usedLanguage = eval(selectLanguage.value);
+    console.log(usedLanguage);
     Play.handlePlayWords();
   },
   
   lang1: function () {
+    languageOne.splice(0);
     currentVocabulary.map(i => languageOne.push(i.lang1.toLowerCase()));
+    console.log(languageOne);
     return languageOne
   },
 
   lang2: function () {
+    languageTwo.splice(0);
     currentVocabulary.map(i => languageTwo.push(i.lang2.toLowerCase()));
+    console.log(languageTwo);
     return languageTwo
   },
 
   lang1and2: function () {
+    theTwoLanguages.splice(0);
     currentVocabulary.map(i => theTwoLanguages.push(i.lang1.toLowerCase(), i.lang2.toLowerCase()));
+    console.log(theTwoLanguages);
     return theTwoLanguages
   },
 
   handlePlayWords: function () {
+    console.log(usedLanguage, currentVocabulary, arrayItems);
+
     if (currentVocabulary.length > 2) {
       listWordsCard.classList.remove("list_words_card");
       addWordsCard.classList.remove("add_words_card");

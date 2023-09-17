@@ -9,7 +9,7 @@ let App = {
 
     response.disabled = true;
 
-    Play.lang1(); Play.lang2(); Play.lang1and2();
+    // Play.lang1(); Play.lang2(); Play.lang1and2();
     selectLanguage.addEventListener('change', Play.handleChooseLangToUse);
     
     buttonPlay.addEventListener('click', Play.handlePlayWords);
@@ -18,7 +18,10 @@ let App = {
     formResponse.addEventListener('submit', Play.handleValidation);
 
 
-    buttonList.addEventListener('click', List.handleWordsList);
+    buttonList.addEventListener('click', () => {
+      List.handleWordsList();
+      List.handleSpeechWordList();
+    });
 
     buttonPlus.addEventListener('click', Add.handleOpenAddWordsCard);
     addWordsCard.addEventListener('submit', Add.handleAddWord);
