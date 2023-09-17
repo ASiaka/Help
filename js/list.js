@@ -9,7 +9,9 @@ const List = {
     let listLang1 = document.createElement('p');
     let listLang2 = document.createElement('p');
     listLang1.textContent = lang1;
+    listLang1.classList.add("L1");
     listLang2.textContent = lang2;
+    listLang2.classList.add("L2");
 
     word.append(listLang1, listLang2);
     words.append(word);
@@ -37,5 +39,32 @@ const List = {
     }
 
     listWordsCard.style.border = "none";
+
+    // speechWordList
+    const currentWords = document.querySelectorAll(".word p");
+
+    currentWords.forEach((index) => {
+      index.addEventListener('click', (e) => {
+        console.log(e.target.textContent, e.target.className);
+        List.handleSpeechWordList(e.target.textContent, e.target.className);
+      })
+    });
+  },
+
+  handleSpeechWordList: function (word, lang) {
+    function currentLang() {
+      if (lang === "L1") {
+        return "en-US"
+      }
+      if (lang === "L2") {
+        return "fr-FR"
+      }
+    };
+
+    let text = word;
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = currentLang();
+    speechSynthesis.cancel(speech);
+    speechSynthesis.speak(speech);
   }
 }
