@@ -6,39 +6,40 @@ const Play = {
     // Play.lang2();
     // Play.lang1and2();
     usedLanguage = eval(selectLanguage.value);
-    console.log(usedLanguage);
+    // console.log(usedLanguage);
     Play.handlePlayWords();
   },
   
   lang1: function () {
     languageOne.splice(0);
     currentVocabulary.map(i => languageOne.push(i.lang1.toLowerCase()));
-    console.log(languageOne);
+    // console.log(languageOne);
     return languageOne
   },
 
   lang2: function () {
     languageTwo.splice(0);
     currentVocabulary.map(i => languageTwo.push(i.lang2.toLowerCase()));
-    console.log(languageTwo);
+    // console.log(languageTwo);
     return languageTwo
   },
 
   lang1and2: function () {
     theTwoLanguages.splice(0);
     currentVocabulary.map(i => theTwoLanguages.push(i.lang1.toLowerCase(), i.lang2.toLowerCase()));
-    console.log(theTwoLanguages);
+    // console.log(theTwoLanguages);
     return theTwoLanguages
   },
 
   handlePlayWords: function () {
-    console.log(usedLanguage, currentVocabulary, arrayItems);
+    // console.log(usedLanguage, currentVocabulary, arrayItems);
 
     if (currentVocabulary.length > 2) {
       listWordsCard.classList.remove("list_words_card");
       addWordsCard.classList.remove("add_words_card");
       RemoveWordsCard.classList.remove("remove_words_card");
       moreWordsCard.classList.remove("more_card");
+      changeLanguagesCard.classList.remove("change_languages_card");
       infoCard.classList.remove("info_card");
       RemoveVocabularyCard.classList.remove("remove_vocabulary_card");
   
@@ -83,12 +84,12 @@ const Play = {
     onMute.addEventListener('click', () => {
       if (onMute.className === "fa-solid fa-volume-high on_mute_none on_mute") {
         onMute.classList.replace("fa-volume-high", "fa-volume-xmark");
-        console.log("mute");
+        // console.log("mute");
         return
       }
       if (onMute.className === "fa-solid fa-volume-xmark on_mute_none on_mute") {
         onMute.classList.replace("fa-volume-xmark", "fa-volume-high");
-        console.log("sound");
+        // console.log("sound");
         return
       }
     })

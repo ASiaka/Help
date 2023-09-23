@@ -288,6 +288,46 @@ border: #2E324470 1px solid;
   color: #2E324490;
 }
 
+/*Change languages*/
+
+.change_languages_card_none {
+  width: 285px;
+  /* height: 150px; */
+  padding: 15px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  color: #2E3244;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 65px;
+  /* right: 15px; */
+  z-index: 1;
+  border-radius: 5px;
+}
+.change_languages_card {
+  display: flex;
+}
+.change_languages_card_none > p:first-child {
+  font-weight: bold;
+  color: red;
+}
+.change_languages_card_none > p:nth-child(2) {
+  color: #2E3244;
+  margin: 10px 0;
+}
+.button_change_lang_ok {
+  background-color: #2E3244;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
 /*More words*/
 
 .more_card_none {
@@ -312,6 +352,16 @@ border: #2E324470 1px solid;
 }
 .more:hover {
   background-color: #EFF3F5;
+}
+.langues {
+  display: flex;
+  justify-content: space-between;
+}
+.langues_choisies {
+  font-weight: bold;
+}
+.choise_of_languages {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*Add words*/
@@ -508,7 +558,7 @@ border: #2E324470 1px solid;
 }
 
 @media (max-width: 450px) {
-  .list_words_card_none {
+  .list_words_card_none, .change_languages_card_none {
     width: 80%;
   }
   .remove_word_content {

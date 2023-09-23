@@ -6,8 +6,24 @@ let App = {
     Play.onMute();
 
     Add.handlePushItems();
-
+    
     response.disabled = true;
+
+    console.log(localStorage.length);
+    if (localStorage.length === 0) {
+      moreWordsCard.classList.remove("more_card");
+      infoCard.classList.add("info_card");
+    }
+    More.handleLanguesContent(Langs.handleCurrentLangs());
+    const choiseOfLanguages = document.querySelector(".choise_of_languages");
+    languesChoisies.textContent = choiseOfLanguages.value;
+    choiseOfLanguages.addEventListener('change', () => {
+      languesChoisies.textContent = choiseOfLanguages.value;
+    })
+
+    // Select lang
+    Langs.handleShowCurrentLangs("langOne", "langTwo", "langOneTwo");
+    choiseOfLanguages.addEventListener('change', () => Langs.handleShowCurrentLangs("langOne", "langTwo", "langOneTwo"))
 
     // Play.lang1(); Play.lang2(); Play.lang1and2();
     selectLanguage.addEventListener('change', Play.handleChooseLangToUse);
@@ -30,6 +46,7 @@ let App = {
       listWordsCard.classList.remove("list_words_card");
       addWordsCard.classList.remove("add_words_card");
       moreWordsCard.classList.remove("more_card");
+      changeLanguagesCard.classList.remove("change_languages_card");
       infoCard.classList.remove("info_card");
       RemoveWordsCard.classList.remove("remove_words_card");
 
@@ -65,6 +82,7 @@ let App = {
     buttonMore.addEventListener('click', () => {
       listWordsCard.classList.remove("list_words_card");
       addWordsCard.classList.remove("add_words_card");
+      changeLanguagesCard.classList.remove("change_languages_card");
       RemoveWordsCard.classList.remove("remove_words_card");
       RemoveVocabularyCard.classList.remove("remove_vocabulary_card");
 
@@ -94,6 +112,42 @@ let App = {
       infoCard.classList.add("info_card");
 
       More.handleCurrentContent("contact", "Contact", "Vous pouvez nous contacter via notre site :%https://asiakadev.com");
+    });
+    langues.addEventListener('click', () => {
+      moreWordsCard.classList.remove("more_card");
+      
+      if (localStorage.length > 0) {
+        infoCard.classList.remove("info_card");
+        changeLanguagesCard.classList.add("change_languages_card");
+      } else {
+        infoCard.classList.add("info_card");
+        changeLanguagesCard.classList.remove("change_languages_card");
+
+        const choiseOfLanguages = document.querySelector(".choise_of_languages");
+        choiseOfLanguages.addEventListener('change', () => {
+          languesChoisies.textContent = choiseOfLanguages.value;
+        });
+      }
+
+      // More.handleLanguesContent(Langs.handleCurrentLangs());
+    });
+    buttonChangeLangOk.addEventListener('click', () => {
+      infoCard.classList.add("info_card");
+      changeLanguagesCard.classList.remove("change_languages_card");
+
+      const choiseOfLanguages = document.querySelector(".choise_of_languages");
+      choiseOfLanguages.addEventListener('change', () => {
+        console.log('suppWords Ok');
+        languesChoisies.textContent = choiseOfLanguages.value;
+
+        Remove.handleClearItems();
+  
+        Remove.handleClearWords();
+        
+        Add.handlePushItems();
+        RemoveWordsCard.classList.remove("remove_words_card");
+      })
+      console.log(choiseOfLanguages.value);
     });
     closeInfoCard.addEventListener('click', () => {
       infoCard.classList.remove("info_card");

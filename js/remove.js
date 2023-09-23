@@ -9,7 +9,7 @@ const Remove = {
   },
 
   handleClearWords: function () {
-    console.log(arrayItems, arrayItems.length);
+    // console.log(arrayItems, arrayItems.length);
 
     // Remove.handleClearItems();
     arrayItems.splice(0);
@@ -44,7 +44,7 @@ const Remove = {
         RemoveWordContent.classList.add("remove_word_content");
 
         let wordDeleted = arrayItems.find((x) => {
-          console.log(x.key, keyWord);
+          // console.log(x.key, keyWord);
           return x.key === Number(keyWord);
         });
 
@@ -54,16 +54,16 @@ const Remove = {
         buttonWordOui.addEventListener('click', () => {
           Remove.handleRemoveItem(keyWord);
 
-          console.log(localStorage.length, keyWord, arrayItems);
+          // console.log(localStorage.length, keyWord, arrayItems);
           let wordDeleted = arrayItems.find((x) => {
-            console.log(x.key, keyWord);
+            // console.log(x.key, keyWord);
             return x.key === Number(keyWord);
           });
 
           if (wordDeleted !== undefined) {
-            console.log(wordDeleted);
+            // console.log(wordDeleted);
             let indexOfWordDeleted = arrayItems.indexOf(wordDeleted);
-            console.log(indexOfWordDeleted);
+            // console.log(indexOfWordDeleted);
             arrayItems.splice(indexOfWordDeleted, 1);
   
             let words = document.querySelector(".words");
@@ -79,7 +79,7 @@ const Remove = {
             }
           }
           
-          console.log(arrayItems, currentVocabulary, usedLanguage);
+          // console.log(arrayItems, currentVocabulary, usedLanguage);
           
           usedLanguage.splice(0);
           Play.lang1(); Play.lang2(); Play.lang1and2();

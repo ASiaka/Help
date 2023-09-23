@@ -27,6 +27,7 @@ const List = {
     listWordsCard.classList.toggle("list_words_card");
     RemoveWordsCard.classList.remove("remove_words_card");
     moreWordsCard.classList.remove("more_card");
+    changeLanguagesCard.classList.remove("change_languages_card");
     infoCard.classList.remove("info_card");
     RemoveVocabularyCard.classList.remove("remove_vocabulary_card");
     
@@ -39,16 +40,6 @@ const List = {
     }
 
     listWordsCard.style.border = "none";
-
-    // speechWordList
-    // const currentWords = document.querySelectorAll(".word p");
-
-    // currentWords.forEach((index) => {
-    //   index.addEventListener('click', (e) => {
-    //     console.log(e.target.textContent, e.target.className);
-    //     List.handleSpeechWordList(e.target.textContent, e.target.className);
-    //   })
-    // });
   },
 
   handleSpeechWordList: function () {
@@ -56,7 +47,7 @@ const List = {
 
     currentWords.forEach((index) => {
       index.addEventListener('click', (e) => {
-        console.log(e.target.textContent, e.target.className);
+        // console.log(e.target.textContent, e.target.className);
         speech(e.target.textContent, e.target.className);
       })
     });

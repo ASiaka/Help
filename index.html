@@ -39,9 +39,9 @@
 
     <label for="select_language" id="label_select_language">Select lang :
       <select name="select_language" id="select_language">
-        <option value="theTwoLanguages" selected>Lang 1-2</option>
-        <option value="languageOne">Lang 1</option>
-        <option value="languageTwo">Lang 2</option>
+        <option value="theTwoLanguages" class="langOneTwo" selected>Lang 1-2</option>
+        <option value="languageOne" class="langOne">Lang 1</option>
+        <option value="languageTwo" class="langTwo">Lang 2</option>
       </select>
     </label>
 
@@ -55,16 +55,17 @@
       <li class="more mode_d-emploi">Mode d'emploi</li>
       <li class="more suggestions">Suggestions</li>
       <li class="more contact">Contact</li>
+      <li class="more langues">Langues<span class="langues_choisies"></span></li>
     </ul>
 
     <form action="" class="add_words_card_none">
       <ul>
         <li>
-          <label for="add_word_lang1">L 1&nbsp;:</label>
+          <label for="add_word_lang1" class="lang1">L 1&nbsp;:</label>
           <input type="text" id="add_word_lang1" name="add_word_lang1" />
         </li>
         <li>
-          <label for="add_word_lang2">L 2&nbsp;:</label>
+          <label for="add_word_lang2" class="lang2">L 2&nbsp;:</label>
           <input type="text" id="add_word_lang2" name="add_word_lang2" />
         </li>
       </ul>
@@ -105,7 +106,21 @@
           </div>
         </div>
       </div>
+
+          <div class="remove_words_card_none">
+      <p>Supprimer tout le vocabulaire?</p>
+      <div class="remove_buttons">
+        <button class="button_oui">Oui</button>
+        <button class="button_non">Non</button>
+      </div>
+    </div> 
     </div>
+
+    <div class="change_languages_card_none">
+      <p>ATTENTION!</p>
+      <p>Le changement des langues entraînera la suppression de tout le vocabulaire.</p>
+      <button class="button_change_lang_ok">Ok</button>
+    </div> 
   </main>
   
   <footer class="footer_content">
@@ -134,6 +149,7 @@
   </footer>
 
   <script src="./js/select.js"></script>
+  <script src="./js/langs.js"></script>
   <script src="./js/more.js"></script>
   <script src="./js/play.js"></script>
   <script src="./js/remove.js"></script>

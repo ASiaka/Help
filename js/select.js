@@ -19,6 +19,7 @@ const buttonMoins = document.querySelector(".button_moins");
 const buttonPlus = document.querySelector(".button_plus");
 const buttonList = document.querySelector(".button_list");
 
+const changeLanguagesCard = document.querySelector(".change_languages_card_none");
 const moreWordsCard = document.querySelector(".more_card_none");
 const addWordsCard = document.querySelector(".add_words_card_none");
 const RemoveVocabularyCard = document.querySelector(".remove_vocabulary_card_none");
@@ -28,6 +29,7 @@ const RemoveWordCard = document.querySelector(".remove_word_card_none");
 const listWordsCard = document.querySelector(".list_words_card_none");
 const infoCard = document.querySelector(".info_card_none");
 
+const buttonChangeLangOk = document.querySelector(".button_change_lang_ok");
 const buttonAdd = document.querySelector(".button_add");
 const buttonTout = document.querySelector(".button_tout");
 const buttonUn = document.querySelector(".button_un");
@@ -40,6 +42,8 @@ const aPropos = document.querySelector(".a_propos");
 const modeDemploi = document.querySelector(".mode_d-emploi");
 const suggestions = document.querySelector(".suggestions");
 const contact = document.querySelector(".contact");
+const langues = document.querySelector(".langues");
+const languesChoisies = document.querySelector(".langues_choisies");
 const closeInfoCard = document.querySelector(".close_info_card");
 
 const arrayItems = [];
