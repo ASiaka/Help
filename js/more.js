@@ -81,7 +81,7 @@ const More = {
         return option
       }
     
-      select.append(option("EN / FR", "Anglais - Français"), option("AR / EN", "Arabe - Anglais"), option("AR / FR", "Arabe - Français"));
+      select.append(option("EN / FR", "Anglais - Français"), option("ES / IT", "Espagnol - Italien"), option("AR / FR", "Arabe - Français"));
       return select
     }
     
@@ -101,10 +101,12 @@ const More = {
 
     infoCard.append(infoContent);
 
+    const choiseOfLanguages = document.querySelector(".choise_of_languages");
     if (localStorage.length > 0) {
       console.log(langs);
-      const choiseOfLanguages = document.querySelector(".choise_of_languages");
       choiseOfLanguages.value = langs.langs;
+    } else {
+      // choiseOfLanguages.value = ...
     }
   }
 }

@@ -158,12 +158,29 @@ const Play = {
   },
 
   handleSpeechWord: function (word) {
+    let voices;
+    speechSynthesis.onvoiceschanged = function () {
+      voices = window.speechSynthesis.getVoices();
+      console.log(voices);  
+    }
+
     function currentLang() {
-      if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) || (usedLanguage === languageOne)) {
-        return "en-US"
+      console.log(languesChoisies.textContent);
+      if (languesChoisies.textContent === "EN / FR") {
+        if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) || (usedLanguage === languageOne)) {
+          return "en-US"
+        }
+        if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) || (usedLanguage === languageTwo)) {
+          return "fr-FR"
+        }  
       }
-      if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) || (usedLanguage === languageTwo)) {
-        return "fr-FR"
+      if (languesChoisies.textContent === "ES / IT") {
+        if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) || (usedLanguage === languageOne)) {
+          return "es-ES"
+        }
+        if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) || (usedLanguage === languageTwo)) {
+          return "it-IT"
+        }  
       }
     };
 
@@ -181,6 +198,7 @@ const Play = {
 
     let text = word.textContent;
     const speech = new SpeechSynthesisUtterance(text);
+    console.log(currentLang());
     speech.lang = currentLang();
     speechSynthesis.cancel(speech);
     mute();

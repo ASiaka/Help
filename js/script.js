@@ -23,7 +23,7 @@ let App = {
 
     // Select lang
     Langs.handleShowCurrentLangs("langOne", "langTwo", "langOneTwo");
-    choiseOfLanguages.addEventListener('change', () => Langs.handleShowCurrentLangs("langOne", "langTwo", "langOneTwo"))
+    choiseOfLanguages.addEventListener('change', () => Langs.handleShowCurrentLangs("langOne", "langTwo", "langOneTwo"));
 
     // Play.lang1(); Play.lang2(); Play.lang1and2();
     selectLanguage.addEventListener('change', Play.handleChooseLangToUse);
@@ -123,17 +123,24 @@ let App = {
         infoCard.classList.add("info_card");
         changeLanguagesCard.classList.remove("change_languages_card");
 
+        More.handleLanguesContent(Langs.handleCurrentLangs());
+        
         const choiseOfLanguages = document.querySelector(".choise_of_languages");
         choiseOfLanguages.addEventListener('change', () => {
           languesChoisies.textContent = choiseOfLanguages.value;
         });
+
+        // Select lang
+        Langs.handleShowCurrentLangs("langOne", "langTwo", "langOneTwo");
+        choiseOfLanguages.addEventListener('change', () => Langs.handleShowCurrentLangs("langOne", "langTwo", "langOneTwo"));
       }
 
-      // More.handleLanguesContent(Langs.handleCurrentLangs());
     });
     buttonChangeLangOk.addEventListener('click', () => {
       infoCard.classList.add("info_card");
       changeLanguagesCard.classList.remove("change_languages_card");
+
+      More.handleLanguesContent(Langs.handleCurrentLangs());
 
       const choiseOfLanguages = document.querySelector(".choise_of_languages");
       choiseOfLanguages.addEventListener('change', () => {
@@ -147,7 +154,11 @@ let App = {
         Add.handlePushItems();
         RemoveWordsCard.classList.remove("remove_words_card");
       })
-      console.log(choiseOfLanguages.value);
+
+      // Select lang
+      Langs.handleShowCurrentLangs("langOne", "langTwo", "langOneTwo");
+      choiseOfLanguages.addEventListener('change', () => Langs.handleShowCurrentLangs("langOne", "langTwo", "langOneTwo"));
+      // console.log(choiseOfLanguages.value);
     });
     closeInfoCard.addEventListener('click', () => {
       infoCard.classList.remove("info_card");
