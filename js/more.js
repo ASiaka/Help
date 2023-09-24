@@ -81,7 +81,7 @@ const More = {
         return option
       }
     
-      select.append(option("EN / FR", "Anglais - Français"), option("ES / IT", "Espagnol - Italien"), option("AR / FR", "Arabe - Français"));
+      select.append(option("EN / FR", "Anglais - Français"), option("ES / FR", "Espagnol - Français"), option("IT / FR", "Italien - Français"), option("AR / FR", "Arabe - Français"));
       return select
     }
     

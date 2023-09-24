@@ -165,22 +165,59 @@ const Play = {
     }
 
     function currentLang() {
-      console.log(languesChoisies.textContent);
+      // if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) || (usedLanguage === languageOne)) {
+      //   return "en-US"
+      // }
+      // if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) || (usedLanguage === languageTwo)) {
+      //   return "fr-FR"
+      // } 
+      console.log(languesChoisies.textContent, Play.wordFind().lang1);
+      if (usedLanguage === languageTwo) {
+        return "fr-FR"
+      } 
       if (languesChoisies.textContent === "EN / FR") {
-        if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) || (usedLanguage === languageOne)) {
+        if (usedLanguage === languageOne) {
           return "en-US"
         }
-        if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) || (usedLanguage === languageTwo)) {
+        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
+          return "en-US"
+        }
+        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
           return "fr-FR"
-        }  
+        }
       }
-      if (languesChoisies.textContent === "ES / IT") {
-        if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) || (usedLanguage === languageOne)) {
+      if (languesChoisies.textContent === "ES / FR") {
+        if (usedLanguage === languageOne) {
+          return "es-ES"
+        } 
+        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
           return "es-ES"
         }
-        if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) || (usedLanguage === languageTwo)) {
+        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
+          return "fr-FR"
+        }
+      }
+      if (languesChoisies.textContent === "IT / FR") {
+        if (usedLanguage === languageOne) {
           return "it-IT"
-        }  
+        }
+        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
+          return "it-IT"
+        }
+        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
+          return "fr-FR"
+        }
+      }
+      if (languesChoisies.textContent === "AR / FR") {
+        if (usedLanguage === languageOne) {
+          return "ar-AR"
+        }
+        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
+          return "ar-AR"
+        }
+        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
+          return "fr-FR"
+        }
       }
     };
 
