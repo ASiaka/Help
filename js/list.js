@@ -55,7 +55,18 @@ const List = {
     function speech(word, lang) {
       function currentLang() {
         if (lang === "L1") {
-          return "en-US"
+          if (languesChoisies.textContent === "EN / FR") {
+            return "en-US"
+          }
+          if (languesChoisies.textContent === "ES / FR") {
+            return "es-ES"
+          }
+          if (languesChoisies.textContent === "IT / FR") {
+            return "it-IT"
+          }
+          if (languesChoisies.textContent === "AR / FR") {
+            return "ar-AR"
+          }
         }
         if (lang === "L2") {
           return "fr-FR"
