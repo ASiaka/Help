@@ -20,9 +20,9 @@ let Langs = {
     l1.textContent = lang[0];
     const l2 = document.querySelector(`.${classL2}`);
     l2.textContent = lang[1];
-    if (classL1_2 !== null) {
-      const l1_2 = document.querySelector(`.${classL1_2}`);
-      l1_2.textContent = lang[0] + " / " + lang[1];  
-    }
+    // if (classL1_2 !== null) {
+    //   const l1_2 = document.querySelector(`.${classL1_2}`);
+    //   l1_2.textContent = lang[0] + " / " + lang[1];  
+    // }
   }
 }

@@ -40,6 +40,27 @@ const List = {
     }
 
     listWordsCard.style.border = "none";
+
+    // TITLES LIST
+
+    function titlesList() {
+      let titles;
+      if (languesChoisies.textContent === "EN / FR") {
+        titles = "Anglais/Français"
+      }
+      if (languesChoisies.textContent === "ES / FR") {
+        titles = "Espagnol/Français"
+      }
+      if (languesChoisies.textContent === "IT / FR") {
+        titles = "Italien/Français"
+      }
+      if (languesChoisies.textContent === "AR / FR") {
+        titles = "Arabe/Français"
+      }
+      return titles.split("/");
+    }
+    document.querySelector(".list_title_one").textContent = titlesList()[0];
+    document.querySelector(".list_title_two").textContent = titlesList()[1];
   },
 
   handleSpeechWordList: function () {

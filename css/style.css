@@ -475,14 +475,14 @@ border: #2E324470 1px solid;
 .list_words_card {
   display: block;
 }
-.list_title {
+.list_titles {
   padding: 15px;
   color: #EFF3F5;
   background-color: #2E3244;
   display: flex;
   justify-content: space-evenly;
 }
-.list_title h1 {
+.list_titles h1 {
   width: 50%;
   text-align: center;
 }

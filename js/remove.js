@@ -14,7 +14,8 @@ const Remove = {
     // Remove.handleClearItems();
     arrayItems.splice(0);
 
-    selectLanguage.value = "theTwoLanguages";
+    // selectLanguage.value = "theTwoLanguages";
+    selectLanguage.value = "languageOne";
 
     successWord.classList.remove("success");
     failedWord.classList.remove("failed");

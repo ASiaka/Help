@@ -179,45 +179,45 @@ const Play = {
         if (usedLanguage === languageOne) {
           return "en-US"
         }
-        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
-          return "en-US"
-        }
-        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
-          return "fr-FR"
-        }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
+        //   return "en-US"
+        // }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
+        //   return "fr-FR"
+        // }
       }
       if (languesChoisies.textContent === "ES / FR") {
         if (usedLanguage === languageOne) {
           return "es-ES"
         } 
-        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
-          return "es-ES"
-        }
-        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
-          return "fr-FR"
-        }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
+        //   return "es-ES"
+        // }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
+        //   return "fr-FR"
+        // }
       }
       if (languesChoisies.textContent === "IT / FR") {
         if (usedLanguage === languageOne) {
           return "it-IT"
         }
-        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
-          return "it-IT"
-        }
-        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
-          return "fr-FR"
-        }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
+        //   return "it-IT"
+        // }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
+        //   return "fr-FR"
+        // }
       }
       if (languesChoisies.textContent === "AR / FR") {
         if (usedLanguage === languageOne) {
           return "ar-AR"
         }
-        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
-          return "ar-AR"
-        }
-        if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
-          return "fr-FR"
-        }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
+        //   return "ar-AR"
+        // }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
+        //   return "fr-FR"
+        // }
       }
     };
 
