@@ -60,7 +60,7 @@ const Play = {
 
       Play.handleSpeechWord(randomWord);
     } else {
-        alert("Vous devez ajouter 3 vocabulaires minimum");
+        alert("Vous devez ajouter 3 vocabulaires minimums. Et pour plus d'expérience ajoutaient 5 vocabulaires minimums.");
         Add.handleOpenAddWordsCard();
       }
   },
@@ -203,6 +203,28 @@ const Play = {
         }
         // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
         //   return "it-IT"
+        // }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
+        //   return "fr-FR"
+        // }
+      }
+      if (languesChoisies.textContent === "DE / FR") {
+        if (usedLanguage === languageOne) {
+          return "de-DE"
+        }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
+        //   return "de-DE"
+        // }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
+        //   return "fr-FR"
+        // }
+      }
+      if (languesChoisies.textContent === "CN / FR") {
+        if (usedLanguage === languageOne) {
+          return "zh-CN"
+        }
+        // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) {
+        //   return "zh-CN"
         // }
         // if (usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) {
         //   return "fr-FR"

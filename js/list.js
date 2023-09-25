@@ -53,6 +53,12 @@ const List = {
       if (languesChoisies.textContent === "IT / FR") {
         titles = "Italien/Français"
       }
+      if (languesChoisies.textContent === "DE / FR") {
+        titles = "Allemand/Français"
+      }
+      if (languesChoisies.textContent === "CN / FR") {
+        titles = "Chinois/Français"
+      }
       if (languesChoisies.textContent === "AR / FR") {
         titles = "Arabe/Français"
       }
@@ -83,6 +89,12 @@ const List = {
           }
           if (languesChoisies.textContent === "IT / FR") {
             return "it-IT"
+          }
+          if (languesChoisies.textContent === "DE / FR") {
+            return "de-DE"
+          }
+          if (languesChoisies.textContent === "CN / FR") {
+            return "zh-CN"
           }
           if (languesChoisies.textContent === "AR / FR") {
             return "ar-AR"

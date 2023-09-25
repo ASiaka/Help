@@ -81,7 +81,7 @@ const More = {
         return option
       }
     
-      select.append(option("EN / FR", "Anglais - Français"), option("ES / FR", "Espagnol - Français"), option("IT / FR", "Italien - Français"), option("AR / FR", "Arabe - Français"));
+      select.append(option("EN / FR", "Anglais - Français"), option("ES / FR", "Espagnol - Français"), option("IT / FR", "Italien - Français"), option("DE / FR", "Allemand - Français"), option("CN / FR", "Chinois - Français"), option("AR / FR", "Arabe - Français"));
       return select
     }
     
@@ -116,6 +116,12 @@ const More = {
         }
         if (languesChoisies.textContent === "IT / FR") {
           choise = "IT / FR"
+        }
+        if (languesChoisies.textContent === "DE / FR") {
+          choise = "DE / FR"
+        }
+        if (languesChoisies.textContent === "CN / FR") {
+          choise = "CN / FR"
         }
         if (languesChoisies.textContent === "AR / FR") {
           choise = "AR / FR"
