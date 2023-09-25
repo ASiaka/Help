@@ -106,7 +106,23 @@ const More = {
       console.log(langs);
       choiseOfLanguages.value = langs.langs;
     } else {
-      // choiseOfLanguages.value = ...
+      function choiseLang() {
+        let choise;
+        if (languesChoisies.textContent === "EN / FR") {
+          choise = "EN / FR"
+        }
+        if (languesChoisies.textContent === "ES / FR") {
+          choise = "ES / FR"
+        }
+        if (languesChoisies.textContent === "IT / FR") {
+          choise = "IT / FR"
+        }
+        if (languesChoisies.textContent === "AR / FR") {
+          choise = "AR / FR"
+        }
+        return choise;
+      }
+      choiseOfLanguages.value = choiseLang();
     }
   }
 }
