@@ -42,7 +42,6 @@ const List = {
     listWordsCard.style.border = "none";
 
     // TITLES LIST
-
     function titlesList() {
       let titles;
       if (languesChoisies.textContent === "EN / FR") {

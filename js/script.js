@@ -99,7 +99,7 @@ let App = {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
 
-      More.handleCurrentContent("mode_d-emploi", "Mode d'emploi", "List : Liste de vocabulaire%Add : Ajout de vocabulaire%Delete : Suppréssion de tout le vocabulaire%Play : Propose aléatoirement un mot du vocabulaire et à vous d'écrire sa traduction.");
+      More.handleCurrentContent("mode_d-emploi", "Mode d'emploi", "List : Liste de vocabulaire%Add : Ajout de vocabulaire%Delete : Suppréssion de tout le vocabulaire%Play : Propose aléatoirement un mot du vocabulaire et à vous d'écrire sa traduction%Select : Sélection de la langue à proposer aléatoirement%(?) : Voir la traduction");
     });
     suggestions.addEventListener('click', () => {
       moreWordsCard.classList.remove("more_card");
