@@ -1,4 +1,4 @@
-console.log("Script.js");
+// console.log("Script.js");
 
 let App = {
   init: function() {
@@ -9,7 +9,7 @@ let App = {
     
     response.disabled = true;
 
-    console.log(localStorage.length);
+    // console.log(localStorage.length);
     if (localStorage.length === 0) {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");

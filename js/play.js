@@ -1,4 +1,4 @@
-console.log("Play.js");
+// console.log("Play.js");
 
 const Play = {
   handleChooseLangToUse: function () {
@@ -158,20 +158,16 @@ const Play = {
   },
 
   handleSpeechWord: function (word) {
-    let voices;
-    speechSynthesis.onvoiceschanged = function () {
-      voices = window.speechSynthesis.getVoices();
-      console.log(voices);  
-    }
+    
+    // SHOW VOICES
+    // let voices;
+    // speechSynthesis.onvoiceschanged = function () {
+    //   voices = window.speechSynthesis.getVoices();
+    //   console.log(voices);  
+    // }
 
     function currentLang() {
-      // if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang1) || (usedLanguage === languageOne)) {
-      //   return "en-US"
-      // }
-      // if ((usedLanguage === theTwoLanguages && word.textContent === Play.wordFind().lang2) || (usedLanguage === languageTwo)) {
-      //   return "fr-FR"
-      // } 
-      console.log(languesChoisies.textContent, Play.wordFind().lang1);
+      // console.log(languesChoisies.textContent, Play.wordFind().lang1);
       if (usedLanguage === languageTwo) {
         return "fr-FR"
       } 
@@ -257,7 +253,7 @@ const Play = {
 
     let text = word.textContent;
     const speech = new SpeechSynthesisUtterance(text);
-    console.log(currentLang());
+    // console.log(currentLang());
     speech.lang = currentLang();
     speechSynthesis.cancel(speech);
     mute();

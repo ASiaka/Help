@@ -1,4 +1,4 @@
-console.log("Remove.js");
+// console.log("Remove.js");
 
 const Remove = {
   handleRemoveItem: function(item) {

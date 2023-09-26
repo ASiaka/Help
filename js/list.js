@@ -1,4 +1,4 @@
-console.log("List.js");
+// console.log("List.js");
 
 const List = {
   wordsList: function (lang1, lang2, key, backgroundGray) {

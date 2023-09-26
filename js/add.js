@@ -1,4 +1,4 @@
-console.log("Add.js");
+// console.log("Add.js");
 
 const Add = {
   handleSetItem: function(index, value) {
@@ -6,7 +6,7 @@ const Add = {
   },
 
   handlePushItems: function() {
-    console.log(arrayItems, arrayItems.length);
+    // console.log(arrayItems, arrayItems.length);
 
     for( let i = 0; i < localStorage.length; i++){
       arrayItems.shift();

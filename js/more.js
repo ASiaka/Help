@@ -1,4 +1,4 @@
-console.log("more.js");
+// console.log("more.js");
 
 const More = {
   handleCurrentContent: function (className, title, paragraph) {
@@ -85,7 +85,7 @@ const More = {
       return select
     }
     
-    console.log(languagesChoosed());
+    // console.log(languagesChoosed());
 
     const infoContent = document.createElement('div');
     infoContent.className = "info_content info_langues";
@@ -103,7 +103,7 @@ const More = {
 
     const choiseOfLanguages = document.querySelector(".choise_of_languages");
     if (localStorage.length > 0) {
-      console.log(langs);
+      // console.log(langs);
       choiseOfLanguages.value = langs.langs;
     } else {
       function choiseLang() {

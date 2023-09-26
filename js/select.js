@@ -1,4 +1,4 @@
-console.log("Select.js");
+// console.log("Select.js");
 
 const formResponse = document.querySelector(".form_response");
 const response = document.querySelector("#response");
