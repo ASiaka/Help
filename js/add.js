@@ -23,6 +23,11 @@ const Add = {
   },
 
   handleOpenAddWordsCard: function () {
+    ///Dépanage
+    document.querySelector(".choise_of_languages") === null &&
+    More.handleLanguesContent(Langs.handleCurrentLangs());
+    ///bug au clique sur add après avoir cliqué sur autre que Langues
+
     Langs.handleShowCurrentLangs("lang1", "lang2");
 
     addWordsCard.classList.toggle("add_words_card");

@@ -14,6 +14,7 @@ let Langs = {
 
   handleShowCurrentLangs: function (classL1, classL2, classL1_2=null) {
     const choiseOfLanguages = document.querySelector(".choise_of_languages");
+    console.log(choiseOfLanguages);
     const lang = choiseOfLanguages.value.split(" / ");
     // console.log(lang);
     const l1 = document.querySelector(`.${classL1}`);
