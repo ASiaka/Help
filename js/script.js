@@ -8,6 +8,15 @@ let App = {
     Add.handlePushItems();
     
     response.disabled = true;
+    formResponse.addEventListener('click', () => {
+      listWordsCard.classList.remove("list_words_card");
+      addWordsCard.classList.remove("add_words_card");
+      RemoveWordsCard.classList.remove("remove_words_card");
+      moreWordsCard.classList.remove("more_card");
+      infoCard.classList.remove("info_card");
+      changeLanguagesCard.classList.remove("change_languages_card");
+      RemoveVocabularyCard.classList.remove("remove_vocabulary_card");
+    })
 
     // console.log(localStorage.length);
     if (localStorage.length === 0) {
