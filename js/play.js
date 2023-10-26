@@ -60,7 +60,7 @@ const Play = {
 
       Play.handleSpeechWord(randomWord);
     } else {
-        alert("Vous devez ajouter 3 vocabulaires minimums. Et pour plus d'expérience ajoutaient 5 vocabulaires minimums.");
+        alert("Vous devez ajouter 3 vocabulaires minimums. Et pour plus d'expérience ajoutez 5 vocabulaires minimums.");
         Add.handleOpenAddWordsCard();
       }
   },
