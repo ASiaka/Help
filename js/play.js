@@ -59,6 +59,15 @@ const Play = {
       Play.seeTheResponse();
 
       Play.handleSpeechWord(randomWord);
+
+      //responseTest
+      if(randomWord.textContent.toLowerCase() === Play.wordFind().lang1.toLowerCase()) {
+        responseTest.word(Play.wordFind().lang2.toLowerCase());
+      }
+      if(randomWord.textContent.toLowerCase() === Play.wordFind().lang2.toLowerCase()) {
+        responseTest.word(Play.wordFind().lang1.toLowerCase());
+      }
+      //////////////
     } else {
         alert("Vous devez ajouter 3 vocabulaires minimums. Et pour plus d'expérience ajoutez 5 vocabulaires minimums.");
         Add.handleOpenAddWordsCard();

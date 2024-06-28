@@ -41,7 +41,7 @@ const Remove = {
         // console.log(e.currentTarget.id, index.id);
 
         keyWord = e.currentTarget.id;
-        console.log(keyWord);
+        // console.log(keyWord);
 
         RemoveWordContent.classList.add("remove_word_content");
 
@@ -56,7 +56,7 @@ const Remove = {
         buttonWordOui.addEventListener('click', () => {
           Remove.handleRemoveItem(keyWord);
 
-          console.log(localStorage.length, keyWord, arrayItems);
+          // console.log(localStorage.length, keyWord, arrayItems);
           let wordDeleted = arrayItems.find((x) => {
             // console.log(x.key, keyWord);
             return x.key === Number(keyWord);
@@ -83,7 +83,7 @@ const Remove = {
           
           // remet à zéro keyWord pour eviter la suppression des clés identiques à celles supprimés
           keyWord = 0;
-          
+
           // console.log(arrayItems, currentVocabulary, usedLanguage);
           
           usedLanguage.splice(0);

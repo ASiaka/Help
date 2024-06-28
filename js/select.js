@@ -46,6 +46,9 @@ const langues = document.querySelector(".langues");
 const languesChoisies = document.querySelector(".langues_choisies");
 const closeInfoCard = document.querySelector(".close_info_card");
 
+////Response Letters
+const responseLettersBlock = document.querySelector('.response_letters_block');
+
 const arrayItems = [];
 let theTwoLanguages = [];
 const languageOne = [];

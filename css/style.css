@@ -229,6 +229,26 @@ border: #2E324470 1px solid;
   margin: 20px auto;
 }
 
+/*Response Letters*/
+.response_letters_block {
+  max-width: 250px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.lettersButton {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  color: #2E3244;
+  border-radius: 5px;
+  border: 1px solid white;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+}
+
 @media (max-width: 450px) {
   .random_word_style {
     width: 250px;
