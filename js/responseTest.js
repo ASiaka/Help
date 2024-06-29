@@ -46,18 +46,26 @@ const responseTest = {
   
   handleClickLetters: function(e) {
     const currentLetter = e.currentTarget;
-    if(currentLetter.disabled === false) {
-      currentLetter.disabled = true;
+    currentLetter.classList.toggle('lettersButton_click');
+    // if(currentLetter.disabled === false) {
+    //   currentLetter.disabled = true;
+    // } else {
+    //   currentLetter.disabled = false;
+    // }
+
+    if(currentLetter.className === 'lettersButton lettersButton_click') {
+      if(currentLetter.textContent === '__') {
+        response.value += " ";
+      } else {
+        response.value += currentLetter.textContent;
+      }
     } else {
-      currentLetter.disabled = false;
+      response.value = "";
+      let nodeChildClick = document.querySelectorAll(".lettersButton");
+      nodeChildClick.forEach((x) => {
+        x.classList.remove('lettersButton_click');
+      })
     }
-    console.log(currentLetter.textContent);
-    if(currentLetter.textContent === '__') {
-      response.value += " ";
-    } else {
-      response.value += currentLetter.textContent;
-    }
-    currentLetter.style.backgroundColor = "gainsboro";
 
     /// Validation
     Play.handleValidation(e);
