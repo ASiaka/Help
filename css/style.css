@@ -612,12 +612,26 @@ border: #2E324470 1px solid;
   align-items: center;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  /* position: relative; */
 }
+
 
 .fa-solid {
   padding: 0 7px 7px;
   margin: 0 10px;
+  /* border-radius: 5px; */
+}
+
+/*Response Letters*/
+#mode_response {
+  position: absolute;
+  top: -50px;
+  right: 15px;
+  padding: 10px;
+  margin: 0;
+  background-color: white;
   border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px gainsboro;
 }
 
 .icons {

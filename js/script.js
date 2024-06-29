@@ -6,6 +6,9 @@ let App = {
     Play.onMute();
 
     Add.handlePushItems();
+
+    //Response Letters
+    responseTest.handleModeResponse();
     
     response.disabled = true;
     formResponse.addEventListener('click', () => {

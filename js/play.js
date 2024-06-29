@@ -46,10 +46,17 @@ const Play = {
       let wordIndex = Math.round(Math.random() * (usedLanguage.length - 1));
       randomWord.classList.add("random_word_style");
       randomWord.textContent = usedLanguage[wordIndex];
-      response.disabled = false;
       response.value = "";
-      response.focus();
-  
+      
+      //Response Letters
+      if (keyBoardOrHand) {
+        response.disabled = false;
+        response.focus();
+      } else {
+        response.disabled = true;
+        response.blur();
+      }
+
       const eyesButton = document.querySelector(".span_button_none");
       eyesButton.classList.add("span_button");
 

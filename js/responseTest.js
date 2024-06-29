@@ -9,7 +9,7 @@ const responseTest = {
     for (let index = 0; index < word.length; index++) {
       
       if(word[index] === " ") {
-        array.push("_")
+        array.push("__")
       } else {
         array.push(word[index]);
       }
@@ -52,11 +52,37 @@ const responseTest = {
       currentLetter.disabled = false;
     }
     console.log(currentLetter.textContent);
-    response.value += currentLetter.textContent;
+    if(currentLetter.textContent === '__') {
+      response.value += " ";
+    } else {
+      response.value += currentLetter.textContent;
+    }
     currentLetter.style.backgroundColor = "gainsboro";
 
     /// Validation
     Play.handleValidation(e);
+  },
+
+  handleModeResponse: function() {
+    console.log("handleModeResponse");
+    
+    let modeResponse = document.querySelector('#mode_response');
+
+    modeResponse.addEventListener('click', () => {
+      if(modeResponse.className === 'fa-solid fa-hand-point-up') {
+        modeResponse.classList.remove('fa-hand-point-up');
+        modeResponse.classList.add('fa-keyboard');
+        keyBoardOrHand = true;
+        response.disabled = false;
+        response.focus();
+      } else {
+        modeResponse.classList.remove('fa-keyboard');
+        modeResponse.classList.add('fa-hand-point-up');
+        keyBoardOrHand = false;
+        response.disabled = true;
+        response.blur();
+      }
+    })
   }
 }
 

@@ -48,6 +48,7 @@ const closeInfoCard = document.querySelector(".close_info_card");
 
 ////Response Letters
 const responseLettersBlock = document.querySelector('.response_letters_block');
+let keyBoardOrHand = false;
 
 const arrayItems = [];
 let theTwoLanguages = [];
