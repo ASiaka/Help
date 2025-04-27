@@ -50,7 +50,7 @@ const Play = {
       
       //Response Letters
       if (keyBoardOrHand) {
-        response.disabled = false;
+        response.disabled = false; 
         response.focus();
       } else {
         response.disabled = true;
