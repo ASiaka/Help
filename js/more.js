@@ -17,7 +17,7 @@ const More = {
       const link = document.createElement('a');
       link.className = "info_paragraph";
       link.classList.add("link_paragraph")
-      link.href = arrayParagraph[index] + "/contact"
+      link.href = arrayParagraph[index] + "#contact"
       link.target = '_blank'
       link.textContent = arrayParagraph[index];
       return link
@@ -55,7 +55,7 @@ const More = {
     let index = 0;
     // if (paragraph !== null) {
       while (index < arrayParagraph.length) {
-        if (arrayParagraph[index] === "https://asiakadev.com") {
+        if (arrayParagraph[index] === "https://asiakdev.fr") {
           infoContent.append(infoLink());
         } else {
           infoContent.append(infoparagraph(arrayParagraph[index]));

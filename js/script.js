@@ -117,13 +117,13 @@ let App = {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
 
-      More.handleCurrentContent("suggestions", "Suggestions", "Vous pouvez nous faire part de vos suggestions via notre site :%https://asiakadev.com");
+      More.handleCurrentContent("suggestions", "Suggestions", "Vous pouvez nous faire part de vos suggestions via notre site :%https://asiakdev.fr");
     });
     contact.addEventListener('click', () => {
       moreWordsCard.classList.remove("more_card");
       infoCard.classList.add("info_card");
 
-      More.handleCurrentContent("contact", "Contact", "Vous pouvez nous contacter via notre site :%https://asiakadev.com");
+      More.handleCurrentContent("contact", "Contact", "Vous pouvez nous contacter via notre site :%https://asiakdev.fr");
     });
     langues.addEventListener('click', () => {
       moreWordsCard.classList.remove("more_card");
